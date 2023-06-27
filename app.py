@@ -1,10 +1,14 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
+import requests
 
 from BBDD.conecctor import BBDD
 
 from models.user import User
 
 app = Flask(__name__)
+
+CORS(app)
 
 connector = BBDD() # Conexión a la BBDD de MongoDB
 
@@ -115,18 +119,24 @@ def deleteUser(username):
 def login():
     username = request.json['username']
     password = request.json['password']
+    token = request.json['token']
 
-    try:
-        result = User.login(username, password, connector)
+    response = requests.post('https://www.google.com/recaptcha/api/siteverify', data={'secret': '6Lc099EmAAAAAAtcEPYRtw905n9YMKfm3u9OZ8YU', 'response': token})
 
-        if result:
-            result['_id'] = str(result['_id'])
-            return ret(True)
-        else:
-            return ret(False, 401)
+    if response.json()['success']:
+        try:
+            result = User.login(username, password, connector)
+
+            if result:
+                result['_id'] = str(result['_id'])
+                return ret(True)
+            else:
+                return ret(False, 401, "Usuario o contraseña incorrectos")
         
-    except Exception as e:
-        return ret("Error al hacer login", 500, str(e))
+        except Exception as e:
+            return ret("Error al hacer login", 500, str(e))
+    else:
+        return ret(response.json(), 498, "Captcha incorrecto")
     
 
 @app.route('/api/users/register', methods=['POST'])

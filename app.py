@@ -1,6 +1,8 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 import requests
+import hashlib
+import os
 
 from BBDD.conecctor import BBDD
 
@@ -22,7 +24,20 @@ def ret(result, status = 200, error = ""):
         "error": error
     })
 
+def hash_password(password):
+    # Crear un objeto hash utilizando el algoritmo SHA-256
+    hasher = hashlib.sha256()
 
+    # Convertir la contraseña en bytes antes de hashearla
+    password_bytes = password.encode('utf-8')
+
+    # Hashear la contraseña
+    hasher.update(password_bytes)
+
+    # Obtener el hash resultante en formato hexadecimal
+    hashed_password = hasher.hexdigest()
+
+    return hashed_password
 
 @app.route('/')
 def origin():
@@ -64,7 +79,7 @@ def getUsers():
 
 
 @app.route('/api/users/<string:username>')
-def getUserByName(username):
+def getUserByNameOrEmail(username):
     try:
         result = connector.client.FULL.users.find_one({ "username": username})
 
@@ -111,15 +126,81 @@ def updatePhone(username):
 
 @app.route('/api/users/profile/<string:username>', methods=['PUT'])
 def updateProfile(username):
-    profile = request.json['profile']
+    if 'profile' in request.files:
+        oldProfile = connector.client.FULL.users.find_one({ "username": username})['profile']
+
+        if oldProfile:
+            os.remove("users/"+oldProfile) # Eliminar el archivo antiguo
+
+
+        file = request.files['profile']
+        filename = file.filename
+
+        if filename == '': # Nombre de archivo vacio
+            return ret("El nombre del archivo no puede estar vacio", 400)
+        
+        allowed_extensions = {'png', 'jpg', 'jpeg'}
+        extension = filename.rsplit('.', 1)[1].lower() # Obtener la extension del archivo
+
+        if extension not in allowed_extensions:
+            return ret("La extension "+extension+" no esta permitida", 400)
+        
+        max_size = 1024 * 1024 * 5 # 5MB
+        size = len(file.read())
+
+        file.seek(0) # Volver al inicio del archivo
+
+        if size > max_size:
+            return ret("El tamaño maximo permitido es de 5MB", 413)
+        
+        file.save("users/"+filename) # Guardar el archivo en la carpeta users
+
+        try:
+            connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": filename}})
+
+            return ret("FOto del usuario "+username+" actualizada correctamente")
+        
+        except Exception as e:
+            return ret("Error al actualizar la foto del usuario "+username, 500, str(e))
+        
+    else:
+        return ret("No se ha enviado ningun archivo", 404)
+
+
+@app.route('/api/users/password/<string:username>', methods=['PUT'])
+def updatePassword(username):
+    oldPassword = request.json['oldPassword']
+    newPassword = request.json['newPassword']
 
     try:
-        connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": profile}})
+        result = connector.client.FULL.users.find_one({ "username": username})
 
-        return ret("FOto del usuario "+username+" actualizada correctamente")
+        if result:
+            if result['password'] == hash_password(oldPassword):
+                connector.client.FULL.users.update_one({"username": username}, {"$set": {"password": hash_password(newPassword)}})
+                return ret("Contraseña del usuario "+username+" actualizada correctamente")
+            else:
+                return ret("La contraseña antigua no coincide", 400)
+        else:
+            return ret("No existe el usuario "+username, 404)
     
     except Exception as e:
-        return ret("Error al actualizar la foto del usuario "+username, 500, str(e))
+        return ret("Error al actualizar la contraseña del usuario "+username, 500, str(e))
+
+
+@app.route('/api/users/profile/<string:username>', methods=['GET'])
+def getProfile(username):
+    directory = "users/"
+    filename = username
+
+    try:
+        if os.path.exists(directory+filename):
+            return send_file(directory+filename)
+        else:
+            return ret("No existe el perfil del usuario "+username, 404)
+        
+    except Exception as e:
+        return ret("Error al obtener la foto de perfil del usuario "+username, 500, str(e))
 
 
 @app.route('/api/users/description/<string:username>', methods=['PUT'])
@@ -133,6 +214,7 @@ def updateDescription(username):
     
     except Exception as e:
         return ret("Error al actualizar la descripción del usuario "+username, 500, str(e))
+
 
 @app.route('/api/users/<string:username>', methods=['DELETE'])
 def deleteUser(username):
@@ -149,6 +231,9 @@ def deleteUser(username):
 def login():
     username = request.json['username']
     password = request.json['password']
+
+    password = hash_password(password)
+
     token = request.json['token']
 
     response = requests.post('https://www.google.com/recaptcha/api/siteverify', data={'secret': '6Lc099EmAAAAAAtcEPYRtw905n9YMKfm3u9OZ8YU', 'response': token})
@@ -181,9 +266,11 @@ def register():
     email = request.json['email']
     phone = request.json['phone']
 
+    password = hash_password(password)
+
     print(username, password, email, phone)
 
-    if getUserByName(username).json['status'] != 200:
+    if getUserByNameOrEmail(username).json['status'] != 200:
         try:
             user = User(username, password, email, phone, connector)
             user.register()

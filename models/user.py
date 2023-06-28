@@ -1,16 +1,15 @@
 class User:
-    def __init__(self, username, password, email, phone, admin, status, connector):
+    def __init__(self, username, password, email, phone, connector):
         self.username = username
         self.password = password
         self.email = email
         self.phone = phone
-        self.admin = admin
-        self.status = status
+        self.status = 0
         self.connector = connector
 
 
     def __str__(self):
-        return f"USER: {self.username}, {self.password}, {self.email}, {self.phone}, {self.admin}, {self.status}"
+        return f"USER: {self.username}, {self.password}, {self.email}, {self.phone}, {self.status}"
     
 
     def register(self):
@@ -19,16 +18,23 @@ class User:
             "password": self.password,
             "email": self.email,
             "phone": self.phone,
-            "admin": self.admin,
-            "status": self.status
+            "status": self.status,
+            "profile": "",
+            "description": ""
         })
         return result
     
     @staticmethod
-    def login(username, password, connector):
+    def login(username, connector):
         result = connector.client.FULL.users.find_one({
-            "username": username,
-            "password": password
+            "username": username
         })
+
+        if result == None:
+            result = connector.client.FULL.users.find_one({
+            "email": username
+            })
+        
+
         return result
 

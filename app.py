@@ -72,6 +72,11 @@ def getUserByName(username):
             result['_id'] = str(result['_id'])  # Convertir el ObjectId en un string
             return ret(result)
         else:
+            #Comprobamos si existe el usuario por email
+            result = connector.client.FULL.users.find_one({ "email": username})
+            if result:
+                result['_id'] = str(result['_id'])  # Convertir el ObjectId en un string
+                return ret(result)
             return ret("No existe el usuario "+username, 404)
         
     except Exception as e:
@@ -104,6 +109,31 @@ def updatePhone(username):
         return ret("Error al actualizar el teléfono del usuario "+username, 500, str(e))
 
 
+@app.route('/api/users/profile/<string:username>', methods=['PUT'])
+def updateProfile(username):
+    profile = request.json['profile']
+
+    try:
+        connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": profile}})
+
+        return ret("FOto del usuario "+username+" actualizada correctamente")
+    
+    except Exception as e:
+        return ret("Error al actualizar la foto del usuario "+username, 500, str(e))
+
+
+@app.route('/api/users/description/<string:username>', methods=['PUT'])
+def updateDescription(username):
+    description = request.json['description']
+
+    try:
+        connector.client.FULL.users.update_one({"username": username}, {"$set": {"description": description}})
+
+        return ret("Descripción del usuario "+username+" actualizada correctamente")
+    
+    except Exception as e:
+        return ret("Error al actualizar la descripción del usuario "+username, 500, str(e))
+
 @app.route('/api/users/<string:username>', methods=['DELETE'])
 def deleteUser(username):
     try:
@@ -125,18 +155,23 @@ def login():
 
     if response.json()['success']:
         try:
-            result = User.login(username, password, connector)
+            result = User.login(username, connector)
 
             if result:
                 result['_id'] = str(result['_id'])
-                return ret(True)
+                if result["password"] == password:
+                    return ret(True)
+                else:
+                     # Aqui podriamos devolver un contrasñea incorrecta pero lo he hecho asi 
+                     # para que no se sepa si el usuario existe o no
+                    return ret(False, 401, "Usuario o contraseña incorrectos")
             else:
                 return ret(False, 401, "Usuario o contraseña incorrectos")
         
         except Exception as e:
             return ret("Error al hacer login", 500, str(e))
     else:
-        return ret(response.json(), 498, "Captcha incorrecto")
+        return ret(response.json(), 498, "Creemos que eres un robot")
     
 
 @app.route('/api/users/register', methods=['POST'])
@@ -145,17 +180,20 @@ def register():
     password = request.json['password']
     email = request.json['email']
     phone = request.json['phone']
-    admin = request.json['admin']
-    status = request.json['status']
 
-    try:
-        user = User(username, password, email, phone, admin, status, connector)
-        user.register()
+    print(username, password, email, phone)
 
-        return ret("Usuario "+username+" registrado correctamente")
+    if getUserByName(username).json['status'] != 200:
+        try:
+            user = User(username, password, email, phone, connector)
+            user.register()
+
+            return ret("Usuario "+username+" registrado correctamente")
         
-    except Exception as e:
-        return ret("Error al registrar el usuario "+username, 500, str(e))
+        except Exception as e:
+            return ret("Error al registrar el usuario "+username, 500, str(e))
+    else:
+        return ret("Ya existe el usuario "+username, 409)
 
 
 if __name__ == '__main__':

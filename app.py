@@ -3,16 +3,17 @@ from flask_cors import CORS
 import requests
 import hashlib
 import os
-
 from BBDD.conecctor import BBDD
-
 from models.user import User
+from models.mailManager import EmailManager
 
 app = Flask(__name__)
 
 CORS(app)
 
 connector = BBDD() # Conexión a la BBDD de MongoDB
+
+emailManager = EmailManager()
 
 
 
@@ -38,6 +39,8 @@ def hash_password(password):
     hashed_password = hasher.hexdigest()
 
     return hashed_password
+
+
 
 @app.route('/')
 def origin():
@@ -100,13 +103,27 @@ def getUserByNameOrEmail(username):
 
 @app.route('/api/users/email/<string:username>', methods=['PUT'])
 def updateEmail(username):
-    email = request.json['email']
+    email = request.json['newMail']
+    password = request.json['password']
 
     try:
-        connector.client.FULL.users.update_one({"username": username}, {"$set": {"email": email}})
+        result = connector.client.FULL.users.find_one({"username": username})
 
-        return ret("Email del usuario "+username+" actualizado correctamente")
-    
+        if result:
+            if result['password'] == hash_password(password): 
+
+                oldEmail = connector.client.FULL.users.find_one({ "username": username})['email']
+
+                connector.client.FULL.users.update_one({"username": username}, {"$set": {"email": email}})
+
+                emailManager.sendEmailChanged(oldEmail, username)
+                
+                return ret("Email del usuario "+username+" actualizado correctamente")
+            else:
+                return ret("La contraseña no coincide", 400)
+        else:
+            return ret("No existe el usuario "+username, 404)
+        
     except Exception as e:
         return ret("Error al actualizar el email del usuario "+username, 500, str(e))
 
@@ -116,7 +133,11 @@ def updatePhone(username):
     phone = request.json['phone']
 
     try:
+        email = connector.client.FULL.users.find_one({ "username": username})['email']
+
         connector.client.FULL.users.update_one({"username": username}, {"$set": {"phone": phone}})
+
+        emailManager.sendPhoneChanged(email, username)
 
         return ret("Teléfono del usuario "+username+" actualizado correctamente")
     
@@ -127,42 +148,46 @@ def updatePhone(username):
 @app.route('/api/users/profile/<string:username>', methods=['PUT'])
 def updateProfile(username):
     if 'profile' in request.files:
-        oldProfile = connector.client.FULL.users.find_one({ "username": username})['profile']
-
-        if oldProfile:
-            os.remove("users/"+oldProfile) # Eliminar el archivo antiguo
-
-
-        file = request.files['profile']
-        filename = file.filename
-
-        if filename == '': # Nombre de archivo vacio
-            return ret("El nombre del archivo no puede estar vacio", 400)
-        
-        allowed_extensions = {'png', 'jpg', 'jpeg'}
-        extension = filename.rsplit('.', 1)[1].lower() # Obtener la extension del archivo
-
-        if extension not in allowed_extensions:
-            return ret("La extension "+extension+" no esta permitida", 400)
-        
-        max_size = 1024 * 1024 * 5 # 5MB
-        size = len(file.read())
-
-        file.seek(0) # Volver al inicio del archivo
-
-        if size > max_size:
-            return ret("El tamaño maximo permitido es de 5MB", 413)
-        
-        file.save("users/"+filename) # Guardar el archivo en la carpeta users
-
         try:
-            connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": filename}})
+            oldProfile = connector.client.FULL.users.find_one({ "username": username})['profile']
 
-            return ret("FOto del usuario "+username+" actualizada correctamente")
-        
+            if oldProfile:
+                os.remove("users/"+oldProfile) # Eliminar el archivo antiguo
+
+
+                file = request.files['profile']
+                filename = file.filename
+
+                if filename == '': # Nombre de archivo vacio
+                    return ret("El nombre del archivo no puede estar vacio", 400)
+                
+                allowed_extensions = {'png', 'jpg', 'jpeg'}
+                extension = filename.rsplit('.', 1)[1].lower() # Obtener la extension del archivo
+
+                if extension not in allowed_extensions:
+                    return ret("La extension "+extension+" no esta permitida", 400)
+                
+                max_size = 1024 * 1024 * 5 # 5MB
+                size = len(file.read())
+
+                file.seek(0) # Volver al inicio del archivo
+
+                if size > max_size:
+                    return ret("El tamaño maximo permitido es de 5MB", 413)
+                
+                file.save("users/"+filename) # Guardar el archivo en la carpeta users
+
+                try:
+                    connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": filename}})
+
+                    return ret("FOto del usuario "+username+" actualizada correctamente")
+                
+                except Exception as e:
+                    return ret("Error al actualizar la foto del usuario "+username, 500, str(e))
+                
         except Exception as e:
-            return ret("Error al actualizar la foto del usuario "+username, 500, str(e))
-        
+            return ret("Error al obtener el usuario "+username, 500, str(e))
+
     else:
         return ret("No se ha enviado ningun archivo", 404)
 
@@ -173,11 +198,14 @@ def updatePassword(username):
     newPassword = request.json['newPassword']
 
     try:
-        result = connector.client.FULL.users.find_one({ "username": username})
+        result = connector.client.FULL.users.find_one({"username": username})
 
         if result:
             if result['password'] == hash_password(oldPassword):
                 connector.client.FULL.users.update_one({"username": username}, {"$set": {"password": hash_password(newPassword)}})
+                
+                emailManager.sendPasswordChanged(result['email'], result['username'])
+                
                 return ret("Contraseña del usuario "+username+" actualizada correctamente")
             else:
                 return ret("La contraseña antigua no coincide", 400)
@@ -274,6 +302,8 @@ def register():
         try:
             user = User(username, password, email, phone, connector)
             user.register()
+
+            emailManager.sendWelcomeEmail(email, username)
 
             return ret("Usuario "+username+" registrado correctamente")
         

@@ -11,19 +11,19 @@ app = Flask(__name__)
 
 CORS(app)
 
-connector = BBDD() # Conexión a la BBDD de MongoDB
+connector = BBDD()  # Conexión a la BBDD de MongoDB
 
 emailManager = EmailManager()
 
 
-
-#Funcion para no tener estar formateando el json todo el rato
-def ret(result, status = 200, error = ""):
+# Funcion para no tener estar formateando el json tod el rato
+def ret(result, status=200, error=""):
     return jsonify({
         "result": result,
         "status": status,
         "error": error
     })
+
 
 def hash_password(password):
     # Crear un objeto hash utilizando el algoritmo SHA-256
@@ -39,7 +39,6 @@ def hash_password(password):
     hashed_password = hasher.hexdigest()
 
     return hashed_password
-
 
 
 @app.route('/')
@@ -65,40 +64,49 @@ def ping():
 def getUsers():
     try:
         result = connector.client.FULL.users.find()
-    
+
         listResult = []
 
         for documento in result:
-            documento['_id'] = str(documento['_id']) 
+            documento['_id'] = str(documento['_id'])
             listResult.append(documento)
 
         if len(listResult) > 0:
             return ret(listResult)
         else:
             return ret("No hay usuarios registrados", 404)
-        
+
     except Exception as e:
         return ret("Error al obtener los usuarios", 500, str(e))
 
 
 @app.route('/api/users/<string:username>')
-def getUserByNameOrEmail(username):
+def getUserByNameOrEmail(username, email=False):
+    print(username)
+
     try:
-        result = connector.client.FULL.users.find_one({ "username": username})
+        result = connector.client.FULL.users.find_one({"username": username})
+
+        print(result)
 
         if result:
             result['_id'] = str(result['_id'])  # Convertir el ObjectId en un string
             return ret(result)
         else:
-            #Comprobamos si existe el usuario por email
-            result = connector.client.FULL.users.find_one({ "email": username})
+            # Comprobamos si existe el usuario por email
+            if email:
+                username = email
+
+            result = connector.client.FULL.users.find_one({"email": username})
+
+            print(result)
             if result:
                 result['_id'] = str(result['_id'])  # Convertir el ObjectId en un string
                 return ret(result)
-            return ret("No existe el usuario "+username, 404)
-        
+            return ret("No existe el usuario " + username, 404)
+
     except Exception as e:
-        return ret("Error al obtener el usuario "+username, 500, str(e))
+        return ret("Error al obtener el usuario " + username, 500, str(e))
 
 
 @app.route('/api/users/email/<string:username>', methods=['PUT'])
@@ -110,83 +118,83 @@ def updateEmail(username):
         result = connector.client.FULL.users.find_one({"username": username})
 
         if result:
-            if result['password'] == hash_password(password): 
+            if result['password'] == hash_password(password):
 
-                oldEmail = connector.client.FULL.users.find_one({ "username": username})['email']
+                oldEmail = connector.client.FULL.users.find_one({"username": username})['email']
 
                 connector.client.FULL.users.update_one({"username": username}, {"$set": {"email": email}})
 
                 emailManager.sendEmailChanged(oldEmail, username)
-                
-                return ret("Email del usuario "+username+" actualizado correctamente")
+
+                return ret("Email del usuario " + username + " actualizado correctamente")
             else:
                 return ret("La contraseña no coincide", 400)
         else:
-            return ret("No existe el usuario "+username, 404)
-        
+            return ret("No existe el usuario " + username, 404)
+
     except Exception as e:
-        return ret("Error al actualizar el email del usuario "+username, 500, str(e))
+        print(e)
+        return ret("Error al actualizar el email del usuario " + username, 500, str(e))
 
 
 @app.route('/api/users/phone/<string:username>', methods=['PUT'])
 def updatePhone(username):
-    phone = request.json['phone']
+    phone = request.json['newPhone']
 
     try:
-        email = connector.client.FULL.users.find_one({ "username": username})['email']
+        email = connector.client.FULL.users.find_one({"username": username})['email']
 
         connector.client.FULL.users.update_one({"username": username}, {"$set": {"phone": phone}})
 
         emailManager.sendPhoneChanged(email, username)
 
-        return ret("Teléfono del usuario "+username+" actualizado correctamente")
-    
+        return ret("Teléfono del usuario " + username + " actualizado correctamente")
+
     except Exception as e:
-        return ret("Error al actualizar el teléfono del usuario "+username, 500, str(e))
+        return ret("Error al actualizar el teléfono del usuario " + username, 500, str(e))
 
 
 @app.route('/api/users/profile/<string:username>', methods=['PUT'])
 def updateProfile(username):
     if 'profile' in request.files:
         try:
-            oldProfile = connector.client.FULL.users.find_one({ "username": username})['profile']
+            oldProfile = connector.client.FULL.users.find_one({"username": username})['profile']
 
             if oldProfile:
-                os.remove("users/"+oldProfile) # Eliminar el archivo antiguo
+                os.remove("users/" + oldProfile)  # Eliminar el archivo antiguo
 
+            file = request.files['profile']
+            filename = file.filename
 
-                file = request.files['profile']
-                filename = file.filename
+            if filename == '':  # Nombre de archivo vacio
+                return ret("El nombre del archivo no puede estar vacio", 400)
 
-                if filename == '': # Nombre de archivo vacio
-                    return ret("El nombre del archivo no puede estar vacio", 400)
-                
-                allowed_extensions = {'png', 'jpg', 'jpeg'}
-                extension = filename.rsplit('.', 1)[1].lower() # Obtener la extension del archivo
+            allowed_extensions = {'png', 'jpg', 'jpeg'}
+            extension = filename.rsplit('.', 1)[1].lower()  # Obtener la extension del archivo
 
-                if extension not in allowed_extensions:
-                    return ret("La extension "+extension+" no esta permitida", 400)
-                
-                max_size = 1024 * 1024 * 5 # 5MB
-                size = len(file.read())
+            if extension not in allowed_extensions:
+                return ret("La extension " + extension + " no esta permitida", 400)
 
-                file.seek(0) # Volver al inicio del archivo
+            max_size = 1024 * 1024 * 5  # 5MB
+            size = len(file.read())
 
-                if size > max_size:
-                    return ret("El tamaño maximo permitido es de 5MB", 413)
-                
-                file.save("users/"+filename) # Guardar el archivo en la carpeta users
+            file.seek(0)  # Volver al inicio del archivo
 
-                try:
-                    connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": filename}})
+            if size > max_size:
+                return ret("El tamaño maximo permitido es de 5MB", 413)
 
-                    return ret("FOto del usuario "+username+" actualizada correctamente")
-                
-                except Exception as e:
-                    return ret("Error al actualizar la foto del usuario "+username, 500, str(e))
-                
+            file.save("users/" + filename)  # Guardar el archivo en la carpeta users
+
+            try:
+                connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": filename}})
+
+                return ret("FOto del usuario " + username + " actualizada correctamente")
+
+            except Exception as e:
+                return ret("Error al actualizar la foto del usuario " + username, 500, str(e))
+
         except Exception as e:
-            return ret("Error al obtener el usuario "+username, 500, str(e))
+            return ret("Error al obtener el usuario " + username, 500, str(e))
 
     else:
         return ret("No se ha enviado ningun archivo", 404)
@@ -202,18 +210,20 @@ def updatePassword(username):
 
         if result:
             if result['password'] == hash_password(oldPassword):
-                connector.client.FULL.users.update_one({"username": username}, {"$set": {"password": hash_password(newPassword)}})
-                
+                connector.client.FULL.users.update_one({"username": username},
+                                                       {"$set": {"password": hash_password(newPassword)}})
+
                 emailManager.sendPasswordChanged(result['email'], result['username'])
-                
-                return ret("Contraseña del usuario "+username+" actualizada correctamente")
+
+                return ret("Contraseña del usuario " + username + " actualizada correctamente")
             else:
                 return ret("La contraseña antigua no coincide", 400)
         else:
-            return ret("No existe el usuario "+username, 404)
-    
+            return ret("No existe el usuario " + username, 404)
+
     except Exception as e:
-        return ret("Error al actualizar la contraseña del usuario "+username, 500, str(e))
+        print(e)
+        return ret("Error al actualizar la contraseña del usuario " + username, 500, str(e))
 
 
 @app.route('/api/users/profile/<string:username>', methods=['GET'])
@@ -222,13 +232,13 @@ def getProfile(username):
     filename = username
 
     try:
-        if os.path.exists(directory+filename):
-            return send_file(directory+filename)
+        if os.path.exists(directory + filename):
+            return send_file(directory + filename)
         else:
-            return ret("No existe el perfil del usuario "+username, 404)
-        
+            return ret("No existe el perfil del usuario " + username, 404)
+
     except Exception as e:
-        return ret("Error al obtener la foto de perfil del usuario "+username, 500, str(e))
+        return ret("Error al obtener la foto de perfil del usuario " + username, 500, str(e))
 
 
 @app.route('/api/users/description/<string:username>', methods=['PUT'])
@@ -238,21 +248,39 @@ def updateDescription(username):
     try:
         connector.client.FULL.users.update_one({"username": username}, {"$set": {"description": description}})
 
-        return ret("Descripción del usuario "+username+" actualizada correctamente")
-    
+        return ret("Descripción del usuario " + username + " actualizada correctamente")
+
     except Exception as e:
-        return ret("Error al actualizar la descripción del usuario "+username, 500, str(e))
+        return ret("Error al actualizar la descripción del usuario " + username, 500, str(e))
 
 
 @app.route('/api/users/<string:username>', methods=['DELETE'])
 def deleteUser(username):
     try:
-        connector.client.FULL.users.delete_one({"username": username})
+        password = request.json['password']
 
-        return ret("Usuario "+username+" eliminado correctamente")
-    
+        password = hash_password(password)
+
+        result = connector.client.FULL.users.find_one({"username": username})
+
+        if result:
+            if result['password'] == password:
+
+                connector.client.FULL.users.delete_one({"username": username})
+
+                if result['profile']:
+                    os.remove("users/" + result['profile'])  # Eliminar el archivo de la foto de perfil
+
+                return ret("Usuario " + username + " eliminado correctamente")
+            
+            else:
+                return ret("La contraseña no coincide", 401)
+        
+        else:
+            return ret("No existe el usuario " + username, 404)
+
     except Exception as e:
-        return ret("Error al eliminar el usuario "+username, 500, str(e))
+        return ret("Error al eliminar el usuario " + username, 500, str(e))
 
 
 @app.route('/api/users/login', methods=['POST'])
@@ -264,7 +292,8 @@ def login():
 
     token = request.json['token']
 
-    response = requests.post('https://www.google.com/recaptcha/api/siteverify', data={'secret': '6Lc099EmAAAAAAtcEPYRtw905n9YMKfm3u9OZ8YU', 'response': token})
+    response = requests.post('https://www.google.com/recaptcha/api/siteverify',
+                             data={'secret': '6Lc099EmAAAAAAtcEPYRtw905n9YMKfm3u9OZ8YU', 'response': token})
 
     if response.json()['success']:
         try:
@@ -275,17 +304,17 @@ def login():
                 if result["password"] == password:
                     return ret(True)
                 else:
-                     # Aqui podriamos devolver un contrasñea incorrecta pero lo he hecho asi 
-                     # para que no se sepa si el usuario existe o no
+                    # Aqui podriamos devolver un contrasñea incorrecta pero lo he hecho asi
+                    # para que no se sepa si el usuario existe o no
                     return ret(False, 401, "Usuario o contraseña incorrectos")
             else:
                 return ret(False, 401, "Usuario o contraseña incorrectos")
-        
+
         except Exception as e:
             return ret("Error al hacer login", 500, str(e))
     else:
         return ret(response.json(), 498, "Creemos que eres un robot")
-    
+
 
 @app.route('/api/users/register', methods=['POST'])
 def register():
@@ -296,21 +325,19 @@ def register():
 
     password = hash_password(password)
 
-    print(username, password, email, phone)
-
-    if getUserByNameOrEmail(username).json['status'] != 200:
+    if getUserByNameOrEmail(username, email).json['status'] != 200:
         try:
             user = User(username, password, email, phone, connector)
             user.register()
 
             emailManager.sendWelcomeEmail(email, username)
 
-            return ret("Usuario "+username+" registrado correctamente")
-        
+            return ret("Usuario " + username + " registrado correctamente")
+
         except Exception as e:
-            return ret("Error al registrar el usuario "+username, 500, str(e))
+            return ret("Error al registrar el usuario " + username, 500, str(e))
     else:
-        return ret("Ya existe el usuario "+username, 409)
+        return ret("Ya existe el usuario " + username, 409)
 
 
 if __name__ == '__main__':

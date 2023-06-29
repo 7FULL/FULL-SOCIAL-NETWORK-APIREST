@@ -1,51 +1,52 @@
 from mailjet_rest import Client
 
+
 class EmailManager:
-    
-  def __init__(self):
-    api_key = '6c15b25b5e8166204d2c388114d68101'
-    api_secret = '3baef8ff9b8cd415598284268992c1b3'
-    self.mailjet = Client(auth=(api_key, api_secret), version='v3.1')
 
-  def sendEmail(self, email, name, subject, text):
-    data = {
-      'Messages': [
-        {
-          "From": {
-            "Email": "phermidagomez@gmail.com",
-            "Name": "FULL"
-          },
-          "To": [
-            {
-              "Email": "${email}",
-              "Name": "${name}"
-            }
-          ],
-          "Subject": "${subject}",
-          "HTMLPart": "${text}"
+    def __init__(self):
+        api_key = '6c15b25b5e8166204d2c388114d68101'
+        api_secret = '3baef8ff9b8cd415598284268992c1b3'
+        self.mailjet = Client(auth=(api_key, api_secret), version='v3.1')
+
+    def sendEmail(self, email, name, subject, text):
+        data = {
+            'Messages': [
+                {
+                    "From": {
+                        "Email": "phermidagomez@gmail.com",
+                        "Name": "FULL"
+                    },
+                    "To": [
+                        {
+                            "Email": email,
+                            "Name": name
+                        }
+                    ],
+                    "Subject": subject,
+                    "HTMLPart": text
+                }
+            ]
         }
-      ]
-    }
-    result = self.mailjet.send.create(data=data)
+        result = self.mailjet.send.create(data=data)
 
-    return result.status_code
-  
-  def sendWelcomeEmail(self, email, name):
-    data = {
-      'Messages': [
-        {
-          "From": {
-            "Email": "phermidagomez@gmail.com",
-            "Name": "FULL"
-          },
-          "To": [
-            {
-              "Email": "${email}",
-              "Name": "${name}"
-            }
-          ],
-          "Subject": "Bienvenido a FULL",
-          "HTMLPart": '''
+        return result.status_code
+
+    def sendWelcomeEmail(self, email, name):
+        data = {
+            'Messages': [
+                {
+                    "From": {
+                        "Email": "phermidagomez@gmail.com",
+                        "Name": "FULL"
+                    },
+                    "To": [
+                        {
+                            "Email": email,
+                            "Name": name
+                        }
+                    ],
+                    "Subject": "Bienvenido a FULL",
+                    "HTMLPart": '''
           <!DOCTYPE html>
           <html>
           <head>
@@ -233,7 +234,8 @@ class EmailManager:
                 <h1>Verificación de correo electrónico</h1>
               </div>
               <div class="content">
-                <p>Hola, ${name}</p>
+              ''' + "<p>Hola, " + name + '''
+                                </p>
                 <p>Gracias por registrarte en FULL. Para completar el proceso de verificación de tu correo electrónico, haz clic en el siguiente botón:</p>
                 <a href="">
                   <button class="button">
@@ -250,29 +252,29 @@ class EmailManager:
           </body>
           </html>          
           '''
+                }
+            ]
         }
-      ]
-    }
-    result = self.mailjet.send.create(data=data)
+        result = self.mailjet.send.create(data=data)
 
-    return result.status_code
-  
-  def sendEmailChanged(self, email, name):
-    data = {
-      'Messages': [
-        {
-          "From": {
-            "Email": "phermidagomez@gmail.com",
-            "Name": "FULL"
-          },
-          "To": [
-            {
-              "Email": "${email}",
-              "Name": "${name}"
-            }
-          ],
-          "Subject": "Cambio de correo electrónico",
-          "HTMLPart": '''
+        return result.status_code
+
+    def sendEmailChanged(self, email, name):
+        data = {
+            'Messages': [
+                {
+                    "From": {
+                        "Email": "phermidagomez@gmail.com",
+                        "Name": "FULL"
+                    },
+                    "To": [
+                        {
+                            "Email": email,
+                            "Name": name
+                        }
+                    ],
+                    "Subject": "Cambio de correo electrónico",
+                    "HTMLPart": '''
           <!DOCTYPE html>
           <html>
           <head>
@@ -344,7 +346,8 @@ class EmailManager:
                 <h1>Cambio de correo electrónico</h1>
               </div>
               <div class="content">
-                <p>Hola, ${name}</p>
+                ''' + "<p>Hola, " + name + '''
+                                </p>
                 <p>Tu dirección de correo electrónico asociada a tu cuenta en FULL ha sido cambiada exitosamente.</p>
                 <p>Si no has realizado este cambio, por favor contáctanos de inmediato para que podamos asistirte.</p>
                 <p>Si has realizado el cambio, puedes ignorar este mensaje.</p>
@@ -356,29 +359,29 @@ class EmailManager:
           </body>
           </html>
           '''
+                }
+            ]
         }
-      ]
-    }
-    result = self.mailjet.send.create(data=data)
+        result = self.mailjet.send.create(data=data)
 
-    return result.status_code
+        return result.status_code
 
-  def sendPhoneChanged(self, email, name):
-    data = {
-      'Messages': [
-        {
-          "From": {
-            "Email": "phermidagomez@gmail.com",
-            "Name": "FULL"
-          },
-          "To": [
-            {
-              "Email": "${email}",
-              "Name": "${name}"
-            }
-          ],
-          "Subject": "Cambio de teléfono",
-          "HTMLPart": '''
+    def sendPhoneChanged(self, email, name):
+        data = {
+            'Messages': [
+                {
+                    "From": {
+                        "Email": "phermidagomez@gmail.com",
+                        "Name": "FULL"
+                    },
+                    "To": [
+                        {
+                            "Email": email,
+                            "Name": name
+                        }
+                    ],
+                    "Subject": "Cambio de teléfono",
+                    "HTMLPart": '''
           <!DOCTYPE html>
           <html>
           <head>
@@ -450,7 +453,8 @@ class EmailManager:
                 <h1>Cambio de telefono</h1>
               </div>
               <div class="content">
-                <p>Hola, ${name}</p>
+                ''' + "<p>Hola, " + name + '''
+                                </p>
                 <p>Tu número de telefono asociado a tu cuenta en FULL ha sido cambiado exitosamente.</p>
                 <p>Si no has realizado este cambio, por favor contáctanos de inmediato para que podamos asistirte.</p>
                 <p>Si has realizado el cambio, puedes ignorar este mensaje.</p>
@@ -462,29 +466,29 @@ class EmailManager:
           </body>
           </html>
           '''
+                }
+            ]
         }
-      ]
-    }
-    result = self.mailjet.send.create(data=data)
+        result = self.mailjet.send.create(data=data)
 
-    return result.status_code
-  
-  def sendPasswordChanged(self, email, name):
-    data = {
-      'Messages': [
-        {
-          "From": {
-            "Email": "phermidagomez@gmail.com",
-            "Name": "FULL"
-          },
-          "To": [
-            {
-              "Email": "${email}",
-              "Name": "${name}"
-            }
-          ],
-          "Subject": "Cambio de contraseña",
-          "HTMLPart": '''
+        return result.status_code
+
+    def sendPasswordChanged(self, email, name):
+        data = {
+            'Messages': [
+                {
+                    "From": {
+                        "Email": "phermidagomez@gmail.com",
+                        "Name": "FULL"
+                    },
+                    "To": [
+                        {
+                            "Email": email,
+                            "Name": name
+                        }
+                    ],
+                    "Subject": "Cambio de contraseña",
+                    "HTMLPart": '''
           <!DOCTYPE html>
           <html>
           <head>
@@ -556,7 +560,8 @@ class EmailManager:
                 <h1>Cambio de contraseña</h1>
               </div>
               <div class="content">
-                <p>Hola, ${name}</p>
+                ''' + "<p>Hola, " + name + '''
+                                </p>
                 <p>Tu contraseña asociada a tu cuenta en FULL ha sido cambiado exitosamente.</p>
                 <p>Si no has realizado este cambio, por favor contáctanos de inmediato para que podamos asistirte.</p>
                 <p>Si has realizado el cambio, puedes ignorar este mensaje.</p>
@@ -568,12 +573,12 @@ class EmailManager:
           </body>
           </html>
           '''
+                }
+            ]
         }
-      ]
-    }
-    result = self.mailjet.send.create(data=data)
+        result = self.mailjet.send.create(data=data)
 
-    return result.status_code
-  
-#print(result.status_code)
-#print(result.json())
+        return result.status_code
+
+# print(result.status_code)
+# print(result.json())

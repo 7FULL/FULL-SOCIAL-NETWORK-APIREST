@@ -580,5 +580,120 @@ class EmailManager:
 
         return result.status_code
 
+    def sendTokenSended(self, email, name, token):
+        data = {
+            'Messages': [
+                {
+                    "From": {
+                        "Email": "phermidagomez@gmail.com",
+                        "Name": "FULL"
+                    },
+                    "To": [
+                        {
+                            "Email": email,
+                            "Name": name
+                        }
+                    ],
+                    "Subject": "Token de verificación",
+                    "HTMLPart": '''
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="UTF-8">
+            <title>Token de verificacion</title>
+            <style>
+              /* Estilos generales */
+              body {
+                font-family: Arial, sans-serif;
+                background-color: #f6f6f6;
+                margin: 0;
+                padding: 0;
+              }
+
+              /* Contenedor principal */
+              .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #ffffff;
+              }
+
+              /* Encabezado */
+              .header {
+                text-align: center;
+                margin-bottom: 20px;
+              }
+
+              .header h1 {
+                color: #333333;
+                font-size: 24px;
+              }
+
+              /* Contenido */
+              .content {
+                padding: 20px;
+                background-color: #f9f9f9;
+              }
+
+              .content p {
+                color: #555555;
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+              }
+
+              /* Botón de verificación */
+              .verification-btn {
+                display: inline-block;
+                background-color: #4caf50;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                font-size: 16px;
+              }
+
+              /* Pie de página */
+              .footer {
+                text-align: center;
+                color: #777777;
+                margin-top: 20px;
+              }
+
+              .tokenClass {
+                padding: 10px;
+                background-color: gray;
+                color: white !important;
+                text-align: center;
+                border-radius: 10px;
+              }
+
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <div class="header">
+                <h1>Token de verificacion</h1>
+              </div>
+              <div class="content">
+                ''' + "<p>Hola, " + name + '''
+                                </p>
+                <p>Este es el token a utilizar.</p>
+                ''' + "<p class='tokenClass'>" + token + '''
+                                </p>
+              </div>
+              <div class="footer">
+                <p>No responda a este correo electrónico. Si necesita ayuda, contáctenos en fullenterprisesuport@gmail.com</p>
+              </div>
+            </div>
+          </body>
+          </html>
+          '''
+                }
+            ]
+        }
+        result = self.mailjet.send.create(data=data)
+
+        return result.status_code
 # print(result.status_code)
 # print(result.json())

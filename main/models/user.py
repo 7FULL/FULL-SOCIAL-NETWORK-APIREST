@@ -11,6 +11,18 @@ class User:
     def __str__(self):
         return f"USER: {self.username}, {self.password}, {self.email}, {self.phone}, {self.status}"
     
+    def toJson(self):
+        return {
+            "username": self.username,
+            "password": self.password,
+            "email": self.email,
+            "phone": self.phone,
+            "status": self.status,
+            "emailVerified": False,
+            "profile": "",
+            "description": "",
+            "token": ""
+        }
 
     def register(self):
         result = self.connector.client.FULL.users.insert_one({
@@ -19,8 +31,10 @@ class User:
             "email": self.email,
             "phone": self.phone,
             "status": self.status,
+            "emailVerified": False,
             "profile": "",
-            "description": ""
+            "description": "",
+            "token": ""
         })
         return result
     

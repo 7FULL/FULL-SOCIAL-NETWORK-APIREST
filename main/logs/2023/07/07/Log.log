@@ -1,0 +1,74 @@
+
+
+Date: 2023-07-07 16:13:55.516615
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2SftW9HjKYS5K6d67RpbwDVf-y96DF0myZB3_RsPLmyiO4Pb04xCuDBSiYQtHdOMwmyjOCcPAnSQV9h1wG6ZQ_BTBGURv2C-WM5Yi91fmrKW71J0Dj759WbDs1igOvH6i5uV0G9p1YjBdi4nXOGvSFFGSnOe0KOkM6QbqHnus2_2Jq2Zd0BvMuEmQMbFGSdUtu6FpagbQokWXMl693n62BCy78WyvGyacG1_TFVKqhUcm3nXNw3_TwnndFt08j7ItS1FboVoeI9Okq5mSPROfY810KlxB7KRS8koaVP2inZha0_CKCmv_UhchBosDCb_e05Wy_8PkL_VosbSH_LO0lrQ6r_jpkLikoUcSJU8o2K81rQ8lAfYtXUvLq56X8qkn7oExYHoEl8NldcXT24aIXV4RU2TD3oRN-LfYr8yPN6MIiXiz21ESmyVA3oi2b3nftqt8d4cv-LFMrOvLSQCQLh1Bgj8_cGrIfUgbfegcI5VnU554RRXtF7ihs8sp_wEK8fD_uMB5v9SqyRWIDgmwoAchWakCr32U5dNLOuseyVuqL0Xx1RP6GSCYPufXQI-xIS5AH4dvxPhaUtWuXVDy-1K7gFScZuuI9Te0DM4HGv-pXMXCRupDlMSgbCvX49hA75BqnL-VoCw3SMdy1KMmpSFYUSRhBPsWh-11KUXgvmQr-UULxyyPao440vUjqGRdFijPm8TFIOsbmA0v19YMMQujOfsWc2t_CkGj3c0TYBYM2Ct7ST12KJKfxqDOt9Rbf_5P22lL5iwAxdvK1Zu0wInOn3KMJZ0cGT-RIJPotR9mgo_OkXBHo-s7YnAvnaFJpCCPJjjwV4LMcT5be0Jaj-H75p5Of64PwJZX4IfjXQw1Y1fqg16aTvzJ8YWsoJc_7eqg2kR9YOOjuENk5zUhKl4NnT5p7UFWeFzb84S8aIa4iwkGJLsX5wGQLszZFj3ITBLPudnb4AJOZ6XqzqVdj0uq_GDOCYULmFefKxAAl-ZHj146cjaIjsidbv_2lC-qvyLDKuQbQQqCE481wbgKgLKaGKvk226i-g3iS5kq5KRsLRfgIhW4fCge887fKO13H2Za6Y7uliLk_x-45bdX7Wr8-qEHwGFcm8XJPQ-x-pwLKeZaBQHVtT4C9XgR6VWAkwdeDUFeWZfvR3ASawehTK36CSqUunnEa06Qy_rVlMpQLqALj5S0waGy6g-jIBc-yoRrEkbjaXBf537DDCwxNO6kWWaxfKDM2c-8TobwvHwD5P6s7ixMlbCq4hck9j3FDT1J9p08RYtD4Lnf4C_s5k0vGv6SqG7roy89ZX7Pukb0wlhzG_4ni7GeTCQiIpvc1Hc1JIpJKzsUFlVVYVkAgu2md-sTC_LY6FP6QTPVBSu92XRtCJxiG8nB3jY92F-LpAha0q0hLJoNLR609psaF-Zx-uOHsNK9_I-9L-D4Ubis2KABQ",
+    "response": "<Response [200]>",
+    "e": "ac-jywpepu-shard-00-00.maizixh.mongodb.net:27017: connection closed,ac-jywpepu-shard-00-01.maizixh.mongodb.net:27017: connection closed,ac-jywpepu-shard-00-02.maizixh.mongodb.net:27017: connection closed, Timeout: 30s, Topology Description: <TopologyDescription id: 64a81d4a7a1d342f7d92a92a, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-jywpepu-shard-00-00.maizixh.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('ac-jywpepu-shard-00-00.maizixh.mongodb.net:27017: connection closed')>, <ServerDescription ('ac-jywpepu-shard-00-01.maizixh.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('ac-jywpepu-shard-00-01.maizixh.mongodb.net:27017: connection closed')>, <ServerDescription ('ac-jywpepu-shard-00-02.maizixh.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('ac-jywpepu-shard-00-02.maizixh.mongodb.net:27017: connection closed')>]>"
+}
+Response:
+{   'error': 'ac-jywpepu-shard-00-00.maizixh.mongodb.net:27017: connection '
+             'closed,ac-jywpepu-shard-00-01.maizixh.mongodb.net:27017: '
+             'connection '
+             'closed,ac-jywpepu-shard-00-02.maizixh.mongodb.net:27017: '
+             'connection closed, Timeout: 30s, Topology Description: '
+             '<TopologyDescription id: 64a81d4a7a1d342f7d92a92a, '
+             'topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription '
+             "('ac-jywpepu-shard-00-00.maizixh.mongodb.net', 27017) "
+             'server_type: Unknown, rtt: None, '
+             "error=AutoReconnect('ac-jywpepu-shard-00-00.maizixh.mongodb.net:27017: "
+             "connection closed')>, <ServerDescription "
+             "('ac-jywpepu-shard-00-01.maizixh.mongodb.net', 27017) "
+             'server_type: Unknown, rtt: None, '
+             "error=AutoReconnect('ac-jywpepu-shard-00-01.maizixh.mongodb.net:27017: "
+             "connection closed')>, <ServerDescription "
+             "('ac-jywpepu-shard-00-02.maizixh.mongodb.net', 27017) "
+             'server_type: Unknown, rtt: None, '
+             "error=AutoReconnect('ac-jywpepu-shard-00-02.maizixh.mongodb.net:27017: "
+             "connection closed')>]>",
+    'result': 'Error al hacer login',
+    'status': 500}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-07 23:54:30.140224
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2S-HJ13Cx-bWM8OXcViNJufNU9A1-77fy-MJGXFR_gBVNxO2Y7anlgLHiYe4oH34lEIGRx5OjkXm7FHOC_ZYx2GFWOOLtUG68xXqf3tsMoQtj8W105xlAhyNk8jVeDNe2dplmADOJ-3c4u32Yw_f69c7157tFiHoUGX7eJuJprUKTEJZbx1_tVQRSDBz2TTFsw-gAmRxoY5lUJUvj_2Ala_4IcjVib-vXf4XizqDH93ffDL5E0G7bQJjqENodG-EGG4HPhQe7CJD3ceKPd_Diy34QJMCCq75s51hDLM2yHl86_WNezlswHi7ts39svw0nSgAQhHy8FlZG20P9hpv8lYGghLyQYRt65wr9st7kwbFMus6vhdDO47AWv3T9GhmH_zmZ9uAIlgmLH4o55Y1zdnasWDPWWX7IUSWo0I3IYdnYy8uVVMD3eb27DOs22cIOxJcg4DR80doMzXmADiwMoFhA71tvBV9u_9JlqkajAmrqurgglX_cHdLgpc6TQUB1XykEWNo6B5jjCMPcvTFs-LQaqCD--gAtMBQxYwLht4uUJnpJnDY1ka_mjcZNFEP7KzeTbjnJe2wOD0iJeGQ0uOsX0_w8l-UCjgVqlI05Yia6NRQWEMFqkyqfPpcNfuM7wxJZbjSBBYxS3xYyjX5g--GeNcp8M9fQ_DbwPH6oePfnAGF4MSEOTwoY9lEp-qJpi1ISL1b5lYpoHG4VZnfegf-tHp6WMZKTl4sJAZtirVprm2wO9C5SpCTybQeTn08DsndDxJPe1rUI5FiVjeFAP-CRC1JgEd0akGa3UwUUGSmIEaTAUi4QxHk96CpvwdnlUt1jUvQb-dgChQm-7CEDRq75xZ8gmFpeefspm2iRZm7hnZ3QGDMRDx__PeHAnpl8hXy6UMATt_7Q1BwHMPSdrFC2505Sgnwl0tjFQshvbK_UaHWP1qi8X1tr8nmTUfFWO54Um-jeRsWvesKZP6uZSNBIe0XTGo0xmdApdMyS8QWc8UR-VJIWFy2Y7F7t-NYyUeaO6f9j78GpUU1ei3XnkjZQjylqZElVnVVbR1cEn0XXcWFKuT6MtLNOljwsZbH9Neg7hU5wEymOAKAVR7H8u1C320dxJx2XFmmFkxagYgDyItv5xReaRZW5SXWW9IsPZrmSCh3ueQ5EKwAc6pAiPlNUdRtX_MS_gXEypOLncvNDvIbOLiGrnKYjJLotR7PZLZs-1fW08Yx1QdH3f_RfXJrNVBAnbiGv9lpH7-6OnI16PmOjtXCugemBwr_78iqJ7Z6056q2-L02fJ6A4bBptdM_NvK3dKscuSJcTJxQbHsSpmpyR-ugQ_z1DUg-PPjFFDoJkvesgtalXVPa5a79gORvm_-4mtM4xQXZLShHXr_1OgA1ZBJ5alZZdPHNk8aiAz7gHiKSmTsh8zgkP-klnKUJW36d0RfvBnLy7dRcW-LkR66fU",
+    "response": "<Response [200]>",
+    "e": "ac-jywpepu-shard-00-01.maizixh.mongodb.net:27017: connection closed,ac-jywpepu-shard-00-00.maizixh.mongodb.net:27017: connection closed,ac-jywpepu-shard-00-02.maizixh.mongodb.net:27017: connection closed, Timeout: 30s, Topology Description: <TopologyDescription id: 64a88962e8a2e60c001f0a07, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-jywpepu-shard-00-00.maizixh.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('ac-jywpepu-shard-00-00.maizixh.mongodb.net:27017: connection closed')>, <ServerDescription ('ac-jywpepu-shard-00-01.maizixh.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('ac-jywpepu-shard-00-01.maizixh.mongodb.net:27017: connection closed')>, <ServerDescription ('ac-jywpepu-shard-00-02.maizixh.mongodb.net', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('ac-jywpepu-shard-00-02.maizixh.mongodb.net:27017: connection closed')>]>"
+}
+Response:
+{   'error': 'ac-jywpepu-shard-00-01.maizixh.mongodb.net:27017: connection '
+             'closed,ac-jywpepu-shard-00-00.maizixh.mongodb.net:27017: '
+             'connection '
+             'closed,ac-jywpepu-shard-00-02.maizixh.mongodb.net:27017: '
+             'connection closed, Timeout: 30s, Topology Description: '
+             '<TopologyDescription id: 64a88962e8a2e60c001f0a07, '
+             'topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription '
+             "('ac-jywpepu-shard-00-00.maizixh.mongodb.net', 27017) "
+             'server_type: Unknown, rtt: None, '
+             "error=AutoReconnect('ac-jywpepu-shard-00-00.maizixh.mongodb.net:27017: "
+             "connection closed')>, <ServerDescription "
+             "('ac-jywpepu-shard-00-01.maizixh.mongodb.net', 27017) "
+             'server_type: Unknown, rtt: None, '
+             "error=AutoReconnect('ac-jywpepu-shard-00-01.maizixh.mongodb.net:27017: "
+             "connection closed')>, <ServerDescription "
+             "('ac-jywpepu-shard-00-02.maizixh.mongodb.net', 27017) "
+             'server_type: Unknown, rtt: None, '
+             "error=AutoReconnect('ac-jywpepu-shard-00-02.maizixh.mongodb.net:27017: "
+             "connection closed')>]>",
+    'result': 'Error al hacer login',
+    'status': 500}
+
+
+<------------------------------------------------------->

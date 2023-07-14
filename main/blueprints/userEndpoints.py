@@ -146,15 +146,25 @@ def updateEmail(username):
 @user.route('/api/users/phone/<string:username>', methods=['PUT'])
 def updatePhone(username):
     phone = request.json['newPhone']
+    password = request.json['password']
 
     try:
-        email = connector.client.FULL.users.find_one({"username": username})['email']
+        result = connector.client.FULL.users.find_one({"username": username})
 
-        connector.client.FULL.users.update_one({"username": username}, {"$set": {"phone": phone}})
+        if result:
+            result['_id'] = str(result['_id'])
 
-        emailManager.sendPhoneChanged(email, username)
+            if result['password'] == hash_password(password):
 
-        return ret("Teléfono del usuario " + username + " actualizado correctamente")
+                connector.client.FULL.users.update_one({"username": username}, {"$set": {"phone": phone}})
+
+                emailManager.sendEmailChanged(result['email'], username)
+
+                return ret("Teléfono del usuario " + username + " actualizado correctamente")
+            else:
+                return ret("La contraseña no coincide", 400)
+        else:
+            return ret("No existe el usuario " + username, 404)
 
     except Exception as e:
         return ret("Error al actualizar el teléfono del usuario " + username, 500, str(e))
@@ -350,7 +360,7 @@ def register():
 
 @user.route('/api/users/registerToken/<string:username>', methods=['GET'])
 def registerToken(username):
-    caracteres = string.ascii_letters + string.digits + string.punctuation
+    caracteres = string.ascii_letters + string.digits
     caracteres = caracteres.replace('"', '').replace("'", '').replace("`", '')
 
     token = ''.join(random.choice(caracteres) for _ in range(32))

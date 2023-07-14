@@ -1,0 +1,236 @@
+
+
+Date: 2023-07-10 17:04:41.176375
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2R25cS6qqbbFdLfAvLyBKU8hcncIlvhbcfdGx6erF2obDahD0fo8aD7UFlDQzD6RTBZKmr1E-AnbUudNZx5OuYxSty4D421L2KM_Ut43aH4LCSG9Qf4xyWopVrCg7kwatsdDritfx7yCgs5jq5RAO-iIv4nf6ZxHFU_dp_p-t79llCNRtcnOWTo6XdWjapoObwCKYGHf9hiHhFsWaCfsRLQzFD2_huqHerYLKaKMoUNc-JeJqHiNR2PPtzYI_-6qVtFyhB0qH5Ced2pfKZNoEueiq9CCpjUpvhJacvsxjw0YCluVUrmn0asPqmeaA2aRzL3xyHRjw_5HM2V13vJ6O4t6WAisKeOYK6rjocRK0wDAeXtPvbK28MiNblAa8nF_VXAB9bV_WOVqzJb07Pk3e_BlZ7d43yMh2YY6EDtT8bcYiZ2TIW14gFLNhjFnYpe7CSBi4TZ6dAEDlNkQJLRG495mh_e_JY_vLtde_Yj0gy4IWVI3csqlbt1zqtJ39wq0S42FHSiKc2LPJMM0sbNAF---p8ujIi9H7Wsye8C2bUVpLfmCB22PAUKM3eJzfBfuDXNhPjC0uV-ac2I1w88vpPAkCmME_DPShBPaRgnNTjXqJo9ehpO45nPQZAFBGsY5BiGgtzPNe34MlYiE-vgPMK47yOPLipAm86ECzWCWV_jZRoVN9xFcuRkBSxW6KEIT2nBLAT6iqNV02fjQmn_Qra1aCeA7DArMRGM82OEDEfb0SrtIOrt_EGIrAb-uS6pLxwq3NGQIxUmGVvt1ZDLYxH4Tq-T6oliAQTqAwxoxiXImELmrrCilE9GesdLvCKT0gv1Mmyr37C_OL8kzKqHfvRGxBQ7DrYyYI7SiUNGvsdn9MAO29I4x0K4srnX4-vyXUfcJipgVkxBiB7P-UWn9V8eVvG3EwwOKDT1x7gP2pRC7tGRFRJgOHbUjnowU4J_dB0VNDXUVA6neOACM3U9OIf--1BJOq5woELL0gGqhA5MnXv9_OZUnAjf0IqsQX6ZlALVgqMlO4ocwM_QY6tehHcSeiO4Q2FYr5f14VMVLA4T-nOvWTF1HUtZCM5nfWP0sjKUrzM3Rw6fqi1XIICDty2gZiYwTT4EAaA1g0LFQC0i5fmo5tFe5GHh0l6OPuyJ-99igu5AI38ULu3BEwgEBdtxYfjvTs4JkzCBzScTDQRo0HNlxs88UmxiUYSqzlCHCD-dfiUH-L-H5chdWut3P63hsNZHbuEWE29NxEuQEOfl7AUmeQp0gG2AZUpPpudSn0xzu4OHsLq6ETiSlmeWgHSRlcAHzg1How5GL5hvp-Rh8W-JgQ-E2YDMa00jKXpsFlOg30I6cnza2jeBsfviI55zu68RfhsN6xPr4C165hL9Fkva1eREDXZ9qxydhNgqtnSqi-jmrSTv97E0k4qcKiiY6YxKUrk2lXNBmPlPNJtUBMuDMAURXQCgAlAocteMcr-QeS-B",
+    "response": "<Response [200]>",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{'error': '', 'result': True, 'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-10 17:04:41.350370
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "pi",
+    "email": false,
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-10 17:12:33.529208
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2T38zMqa00wL0vncsDYtXHS-SUehDi1iaojTzvtFfTkg64UsD2zEioLdirblmrvixuZcmEeefzm4LgXeOXxOkf2jY2_dm6ivDQ_rKwaqd_rs64l4Z6TxrPoKb9j0RJM07uMdpaGuZMZ9mMmo6sJikhed3X9cl5wmLX7GvnNX9NKoNqtDx5B7uAiZxmW0n7P1-u71BWRE6T_nlCFVx4MfQMCD1UYehsl82fugqsRwDHlX4rkQbkInuOxtlhkjAPJhvlbyI1Z6Q4yWtGkvlOa0VvNecYqHMy1LfTLJPFH4u_u-vN9_S7aDNSYBKn3KhZ86Y1xdNAGWFvY8XGv-KkR-oodJkFTVMDBvPOy5UghrS6JK6GsCp84xXJDMd2Z-hjEOcqTEcqrLngvSGNKWjL601oc7Zqp4_g8mbBXA-ID1IQU7Dfz9AjQYW6qm0puB6Ld_Cn2Jds-ysqHEcbUamTiua83rTYwKuU6FjL9FLA0bAyjXN5p3cnFZ_jou78eDlWeYVdXfmWGaNYdLB9lnjVbIXUhS364Nokt_P5lYVjEuW9LmdpXF3uhAOtZ3PiLVoiy0kcyAIkwwR-Y3ID2ePC8oq75Q8EbZNNT_8MObsvWd-eWjud6zIhJO6Hx9UZzzC-3uxqXTt5UGkjpvqTdQjAMMCJtBl8OQH7DEFflcURoys2PvWmv-MzC9OAsu9XRD0CNmD2wk5ZqTcxdaoNBK7M5nBUYwG06PR7xwxSAyN75di-iP8KdElgQBIgaTPak4A3crE-0QyW31rzHduu0pmNcY4_SLbrw3zTHZwpXVsoVdL1WI3cLc67vaA_sIWMvTrMtCvrFnVsZkvTVsrX7hfyMwpbU2-e70vseSopzZdgzTETqQnI59M9b3iG4AB13qaXITaTOIraFNbgGksWeLlLqFdjYxJvFa2rMzVJ9oRnHBSmthlQP-LuHLLSzUcXMSlBYnjBxR9ovE68spQdqtEawkHSeQqblRPPhDWMtnsztoW3Ph0As_A_OcxWMhdLT7ObYoY4yj_dZn6am4zZxtziuskSf8Beisb0YSuQJ8FS00bwd5ymE41DG8NYvboolPUtIO79ts1GPqNvd4TndiC4bO19QjteFivuTP-2K2hb2XHSlbgQOpdoZad6tnRSC-UigaTuppvK4wnIk9GC6qr454FZt9d_3G1PnkWvzyoaIV5M0BS45RJu-gzYhj-OEvqSxi_DfQ_YjQkJDfOyizOlbyYT27Po0OI1x4wDTONruyf126uqOPxvVZ-IcJqg90mk_Tnr6kFopP9Oq0DyGJrwSTGC4g5gfpMz4F6ZMh290REr-_DHjNzIt8FJnEQlUIHvySH_YeX6X2ZUuPA5umhLYyrAWYX2RtigUIOll_FE2e4uXm9mkyEv77fj18rqGL5GiI3MW0M8tpvnPkCC5nMx4T_Jj_MM_OgHcfgT30whSqFff2soIUvs",
+    "response": "<Response [200]>",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{'error': '', 'result': True, 'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-10 17:12:33.687865
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "pi",
+    "email": false,
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-10 21:59:51.287065
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-10 21:59:51.289080
+Called: register
+Args:
+{
+    "username": "JOAFWRIC Pablo",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "email": "phgfull@gmail.com",
+    "phone": "66666666666"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario JOAFWRIC Pablo', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-10 22:09:17.289400
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-10 22:09:17.290398
+Called: register
+Args:
+{
+    "username": "JOAFWRIC Pablo",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "email": "phgfull@gmail.com",
+    "phone": "1111111111"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario JOAFWRIC Pablo', 'status': 409}
+
+
+<------------------------------------------------------->

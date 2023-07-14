@@ -1,0 +1,784 @@
+
+
+Date: 2023-07-11 13:37:00.830958
+Called: login
+Args:
+{
+    "username": "adadad",
+    "password": "d1103b4d6d8cfe1d667012b23e9ff32ec54c991db1096bb928ad2da7073ba858",
+    "token": "03AAYGu2RYf2b4vXCT7i59FcvHV-GxFYsCp50nwzX8RKx8eKc0FVteWmqg94DaK13Hx6W0kTaFL59qH6unDVvWvkWg_rOiPk4gR8t7Eja1uGyix4u8OJ_6XSNNhuzRL38lKdVHmvnrdHp3MAuhoNz0X8jZH106IAPsFw0TnsSX25JYn7b4VOcPAz3wLhzIeLzh5EIRF_nZQAIKYOSi8-HcRzEVNnQdhtJexByzt_L_RISWMrQtRPFBFf34i9LsTkrdjpaduhmph0giaLyhv6oLXU6HAkcJN2hVSn66dMJAzC-op3UBuR6-0hXftlDkkbsRNBg_wJd8Eke-ICM7jtjh5GfkCHUymYfKymTwsWSwLDObYc-tOs3WFManSHCZvjaDXHjnR6e0lCpMNX6J8mg_eYdFlukHXwI_DtiAoEzX3XHr__3Ux0awPxfS1MMjvWBhQ1fC84x0P_6jI9prVBZqD2cWs2iIoFYQ-9gjanjT-HsTCUsd-zEVnhwC2q-JsgsDgLxHGeoLS4RKuu83_tGwSwpmfAAu8Oe-MLmapEkuxPg_R9LHbIOOoI9QIFASNG5Vy8fHItjg4A2QEStU5YV3wv3lpX0QwLDrmlxVjKyzmJrs2oWYojXFCyzIPE51DdoX1JavfqIE7jFNcG0UE_CyHu5UNrETQSE-7Q4L3edEjHLu0LMxqfxJg7rengkJXgcCYOAxiNqExBRykRqeBAfpI0pZPiO6muhDcoCfEVgBEcgv9teAHzsQC4GsHc19V2eTIRPO-6tcUEh8LJM-rguE4YO2KIZeiD-t9GcdGb-VgHGU0doeS2t1i2dPn29SnFXTfoWlmN_va2ush45t9WQTTsj2Ud-QzO4pmpg_ibePkRcKKzncQB4x8FTM5EN__VZ1Pd3W4q1ZJMaYO7RKVb8AIZe3MClbLhdl_FYvd7sp3KosS3wu-SLmMG1-8GS2BydeLwlA4OivQpgNtDnRyfHlXFJeKNMFCLTES6dC4laaX1J2h6MgirDWNpTovl78h4D1-syMA8xCcmte3GySSO_RdWx6syIt9orDxyc2-s-U7ZJigr-dNW5H0Q7vbdtXxWFIz9rjG6OWM0KLJB6YLYm9k9vCYAyFZ2ZUNzphHbRithpvVNHjVihIkB633DPjIGDNduRQ1o2uc1lrqGwV7TKXg3PoGhgIiRrRq540VmkIMIJCEyskWL1-ZQ5LPeee_h0sVkHJeg0gI8o_XHkGopddgSN042BnbDgkZGcPxXgRbpdv7SF8l2CbsXYimoBoX1yFGGXLz3NipxxqB3PLVGZ0HkphLRzKB1PH-Naf0PJFe_vt9GmqVaT1VvZp_pKST85mPVhgXa0OAXDIBCDK7JmWIS8lUIrnDuSWbu9oidzw_q6DV7L_7vtHdH-rZ2A2fqRCWT4zLZAXddbTiOJih7RlBTASLy7II-D_q1T9unWnoRIPBzsv0qN3mEA",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 13:37:46.120190
+Called: login
+Args:
+{
+    "username": "adadadad",
+    "password": "9df796ff7c38a25e4d8d1705404e67d663fed4b341217ff568b0b713fa63abfb",
+    "token": "03AAYGu2SCtO66wv-mABSAooIfoNRft0ero6bI2vnIKs6cHkviiljowPOc9Pg52cHKJvdXtIAtNfo9dH0VfuPYZ7pgmjrstbMZIGs_CEO8OLV4Rqq_BBO7Clz1cVB1NUz4ZFMPfkmyS7EIzv8rDqPmfepz6iGpmZ6rkc8usjKT1j0iJBoigeO7X736lSQmfvcJ4DnGiZms3Vu0aFdv-VA8DewqNIIdvqYt8P_Duqz-QOuXMRYnpiGLTxL8MkkOdfICCAo0gSFGdDn0a39zYjmSSFkIUAcwwM9wNtfhy28ETH676REK97MivLRoJcbYEHztYUg46ID_pNc9NWJQgcggcXFJAELMTKkoAWBXEDcU9A3D-Bf7oG-4mUnYU8pB5XKFdqoupHv6OUNIAEkSD7DLpEigQL3zlGITLAeY2jbDYPN8hPvC-ZqonKdg7H_UMVg9syhG2yn55L61Ty4yK0b3VMuRPX9_BwhNdPVyDEerYvExSNA7cajhdPs2Jf0knUHeRwNBWxGEzu7xGZwKkqSPV52WODRIwY_ytJLr-sjhlyIokZR9KKH-l-DIw2Mv4NGWcCGDYPB3uIS_kqs5Xbp1QyQiFYMrK241kSMNdLgEWmukpz0Tf3t4ROEjDGYjx9PVFkBKEj5Cs-CjCreYxz6i7VQ77FdbuJAYziSsVMEFyQN6oPKRiTm10Ow045htEUwU4Hs98Iv25VKoTp6OJQ87_jgIchVbFK6V4XyRTGop0kmu858GjUe95hx1BpldMJHIqyjUJRE0s3O4bvHzHO6GHj83SAG5IwOBB6LOabJBPwqj-2VQkSQ77XT4wyA5ocs6YdUw1knXUZkAkkXr8UlLmxiuDfubH9P0W8uGAakCmdx-NeNSs51ihfLjf43jnUy-DaODHtljX71N807Bgc150dbqKZTFq0MJeYM8O1b927QERGx9FS8xSgGTwv9LbM3kddn8Fm6fNRtTu2m-Jgx4DtkI3U8vTfufA_JQRKrupDXr8IQfP2nz8pcPmvCVGudWkW12jif-O9NYrC-ECsuj_kk3Hknv6ByG4gCjJWRIhT6HBSa65vbTfGHsZR6xSi1mSz2lbntVxRWur0uvo4_9jl5fCkG0q04dBH3fKY-yr9xUzm3kuRg-amxrk9H8wCE16Y5OZQuKg4DT1ISuf5CSmbxCHV0hVamyhX5K3oMB9mT2RbhOvU2qDBXV3S8GI6yiaju9eAASZs2Cd_Xs-Ro4nXXRGuuc6zmHE9yyV9GIxdywuSvhKhabWuwRe_gDRptqiRYqQEQu1EYURp3Bqx-PcTpwM54x6UUcBYJBEKq_UxsdADX8VN4rTCmtr9KciFl_181jU4xMRYtGTX0HVbiBw_PrGYPkzjfaLVBLsc0gkv-ulOVsIBX12WNticTurzVITfsxPo-douShDWwGOT21-hqcOAz_T8Ln6N7sw-KENINk-5ZQrPgs5GU",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 13:39:25.060851
+Called: login
+Args:
+{
+    "username": "patata",
+    "password": "23ba2776858be6ce3f768a21a04879901c376e4d23c8b6dce277a38136ad4d8c",
+    "token": "03AAYGu2S7Vzfa0wmep6s_lx_IOL7NFrIeI0NV_MfGS69OKsu47xEcAiW2akqMv2ZP8z65CcicovC9lhFx7LyyxECllsalf6bjV8ojEX2YHp8KQo-GnEYT26mpCpVTiCwSNf_2f86P2ubZeLJXZmIGmqg3YGLCcWGoqUB9Dz4DV7jBYxFZAwcSbeXBjYzGBEkahoo-Z3Z42ZGL2HySzLd9TpVgu_6C9Jz05vmAZARILXLeb9fjx0vHaDrYHlgyGzBdJvnlMt5L9DnpY2GCcWE_7u7WyjJH5h3J3_OhahcMK90NSMbc4ACYAbyKr9rl-xhQFXZmAM0cHtIFPc_GZUYXFRP9phiO5yU1apZS_2ofjKIfhqr0JCnNNMJKYHPRxaaBj3u9RNZqX5kpHOc7W0BzoQlp7iZJXPU8pK14PLvuqV4wMsArKfbD1b-ATKVDGaLsGIbmJNpkVIPzLqei1z8mcWBx-TzrWxyPR88fPICSzWHItnb5js1pEPMq6H9CXz9Z83ysU0sHVtbEMDafGbpwziUfuLRZ8tNZnOmP5u_3j0y2ZcuheCJukljfKgceI8EvFCfVeoDSTF0tsHVX3997NgIBjWdNZM7eLkH-P-0U5S6xDgWuW-ScMC4JOXZbnuZfBidcZZlVAPUqW-rZlCNEo2RzYKPkrXQX4u9TNfL1M9-eSRABdNR25MdipnGZOMXhPMBHJRV3Jieh7I2KCDIwH0h8pf6S6GcXWJNpFKbGPh_E3xaH15hM2eh1YjTvS-SBoGLM17CrrtFcjHOGw6ln9z5q4cIQjcb3tMachBgbjSifOW65q7RFysPI5TDcGNKx-VKJN8BeOhgTlZguzErbB489izXPBnoV9A_vR0iRLJDH9Y-FgMFdxC9oBSClp5Dwxt30y4lzkWqUJq_Ds9ZFTF2IgTWKld6VCNM-iZASH9-h624t0-eCTEoI1y7pSV8swpwRyxfL1p1t15-Z8J_kAZXa9SBAGrq-NKzsKmOCjX_Xlszu9GpaDWe7KSZ1uWIfzJSMoA1QINpLDObbaCYX-Fth0jehCSHVxB8qF2j22fLRvNmaVbeLFeWJTDL5VqwcLkMQMG_CIEW7q5iHPzrU0caMggmeGsQQjjmb8qe2Q7Gopc45ckz_M58bxRkwTQX6JS1xzUbsuAPmWG9TFLo3SNkbkzj1evWbxEeSzIMGAd6RdK6fA2jIp8QBqe7scSFV0SssP_qLreNYgQED9Xyf4X4ECT3BTnq10Y-m1n2zJiCYZ8qlpZRdcCiu7WVPQftphZACet5WppOiuQsExIQDqC7i4SR6__GzfAIe4Z4Zt17zTIzqHF14jFuylhEF1hDMUwF2_HGTfDGVrR2WZmolifeFIL_N8rrmqrr6umoJ0px8x-eh-WVpKvcbKamCfinf0Wb3SrywCOWiB4TZgvUZM3FUlwKPzuelWM42ezLSirp3zcFYqIoafj8jq9a1ZQ20nuj72ivTr65Z",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 13:39:46.486167
+Called: login
+Args:
+{
+    "username": "adghfjdefaDQSFAGD",
+    "password": "292b9e00bfa4b2399777b52a3339eceaf048e5c1a1db04b50d396a504f6f5741",
+    "token": "03AAYGu2RT1Wi8c3FFWZj9rOkm7T3xwTjrHes38YTYluFcL-PeUucNJMlJVH34QZmp0_5JmEcxBawxGnbSGvqnonWIr1D4OIFHRxKzxNcUQ8wphcoFScBSjMUze_BmKQG0C0-QVHQQH72W9KKANmJNFXIhBKQMdbWq8U49hH8uEJ60YRnaex9DdJNjUEKreHT81s4pNBdcGpMbJT7dhPHF2pPQB5RL_pFJ40f6vv36zN6KzUbWffdKHo4C8yyTi7p8gixJjvtBIDQ2AZaVJOLON-JHm1zZfRd1RqsIgxsuizy3UbjR1gm9cguFA8XzUwFTErM3S0EmLq8dF-aCv0g5jEte5yosS5tggWidtDnmo25R1r2zyhNpv8XLV2Nezb_89SOE3iOI_zh5Pf8TwO9i5SX8sfo3X7Kq0CBV3Bs9BU-Dconx62iQOzRwvNS5aQAkuAQSq3EtZOHMsH8TpSj97wqRzYRalNw-sJQH-g1Op5Q2SJrCWuFDY_d5WBrpDAtkrB6w20YbCb9or2g1zGvU7ZfxfzTWVnkWa-Q94nGudoZjGInD3ln1wzC4alc6yyOKUymS83IQ2k6BzwCgddP2FXdrOIiZkk1_15mErCqBs34Cj30fMfpqnwnoZ3CSC_WM5SIXM7YwVjRndKZyFa4XBRoXTykYoAzCJW_TlWFvdKO7IH4QEZSFOTcb15f9oCqLi8KGixc5N2gIO2b-jCqT26KnfB2ScbVPE5APCKZrlnjCUKBkAYe6TAvvPum5GrX7cX1xUHyDNfTxAehHS7X_maC52j-DeKxXqWZy5Fay2G9bHDNSLLZx4NLbrN4y7FPbDZBpkY8Eipg0rWipUszrHeAne4J6yIXRDYIrRWVrTzZ6moAWKCxRVFOhp88QYGUHkLmiLjvClInM8bWobpix3-DzrdrjqL3HBZWS77hBJX4xha7LiIcqWybbCJlf1Tj12lpiIfnp1HFuegE1A550kRvR99R9U0NonE7wJxCce1vz8-OAlta2iqH9Z5ttVT5o7vW1rcmMLZnS9sJAIM-OOBp9UN_zaam7PA0bDlXjdIDt_SKv9T58_wLORZu_3wHTk8pOL1bbKn_NUHFuEg62NGHKr496JHsvA4mPhzhr_UyEgcE3jj83pZqmHdzuUKV1cXmQ7izp3k6P-bRYDFfG-5UykEHsTVr6ZVoLowdR-pS5CmJFUISB8AHUrBAc7fKqg5rB2S1Jcehxp_aw7ReEX9R2A0Xsnb1-OsDObePalLnjV57tNUFUTz7SvqKIrRspOw-nqXsJTch8qO0ygGWFZrIwHjIHtqXKxtSCF5GUcYB_mpGwLCgOeTawpY0ANL-6L-O9-h_7Ya9E65cwFazsOyd302iI636i_--pw4etRYQR8l8DZy6iOvvH9cFEd801ZjC_ojxypgmCYXH9XgqcfFmaAhML72EQ6mjwNzF6_YHd0qr6lIeEOHkxNNa78LKZ3rLyr9WFTk5d",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 13:40:35.955284
+Called: login
+Args:
+{
+    "username": "dwarshfjhghgrfe",
+    "password": "06d8582a98cf153b13fa6aa2c320c78ced6b7912fe9c9b34b7498c706b6837af",
+    "token": "03AAYGu2RZOaec-o4TtchS7c9ak3j7Kwbaldt-1fI6nLrRG-OjT5yQLxl8VRByDGBAydB8BA6RokobEMzKelN8DmULlqd-3_KGgfy2T9caBzeGBB3NXB6IN4Kp-9aSkkcRzpKNBZeNsU4Aj8lelVrnUR1p5tJCT-baBc-E9IOt3jcnOb8GDVSq885cCEB-LM55SIInmQjw1rDmxOqnw1d7dz4QLZqwzHd8-CCheXes_-Fpzy4sDaYSZ7yUUB4mWzuHy7_tQygipfjDRyCUj-1Vq-T18ey1u1C4C5Ut2s7BYN6NczFACL3MDUrh-Sn6Az_SSW45UCPjDfW-98gnGyxEbfXB0TukLEGq7SsiwgM9z2vz08Lxbv0wAo6GUNd61jHxWT45FJuSCnmbCFOw9hV8r-Mz1Z69u1X2bwg-1kJHr5lFuVkmcIrEaJnWZP0shQZVYBgpEw9SdNlby7dW1W7ONUZqxSkP76o-o9ARSuEnB5CLYYQRTsMxgaJLVkNXREJ-IIPXyCuEn9FssbVXblYeC4S4PPS_-wElpd5aBO8isDaicKuQd5MkSLYbp_mkq1apFbUxS58WexU2XCp82xrmildfM9tQvx0Bk0EOu4AbZuk3gDrkSdxzR4a5h0VM6f4AE8qzS3Hp1vnHkruppCvUoVrioXPbesHLCaKe1_-4rkV4vjLruVcNdaL4fX1cNDyNlmh2gTcp3lDl7-kHyZjM_8mK9_34oc4JTmXUdF6vMeTOHsP8OQ_jlkpkzaXLSqg1VrzIXgCONM6k-YYS4MWVBI0OMshCQibKX5N0eucIY_cLgr8K5npixfrdtEX6Dyh74OZHd_0tMYnCRXtFjlfGWFpJ3tb2PxZQhurbY-Rr46mUqQP9NWsVJcn3KHex7Lbt-QW3s12T4OYeAoRe-i5xmhMZTp6Tjrr6zgcG8wj8gDv_735PL3_YeyVrqQlBgN-LgEzfJzWayecvUWQ7YP1pBNTkP9Jpqy67Zg9GT2J4zE2uN8EOYCHNukWYslJbPWL__gDjNmj8Pv4sJC44u6ecMyrF71f5JhgZBIFV--4TPKI5Sm4v2Bk8SW8YGyXJ7cDSa7xHSuqyu_5msOhA-gBq6rxULFINtYkxnq9Gb6i7h0eJI_vaUlv-xyZS5ypxYQq97Rf5DcWHlLJU4kljz67JpDgm-czXF25UW40sQvCQqCQFJqWC4zITMRS8zUqEpPwIKsILFkgAmZTCTYlzabc0-8GzGZRoIY_lWVlLJ9cWGAnA19Iq1LjB2eLowZWkthGF6aCUKLgbSxia6DkkhqGKDdwjDXD2EBlGt7WQQ_dc6qcl4SgT1beOYCDe2CwMIw0tIrWOPzPvXDm1aCRQAMZSBnjgPOUWVBKsoYoZywQ1_NOF2miRA6qSwnzf-X6z053ZZEMro4iJywKjUNkvX4-izKTyuKpzouwLIAsu6TWHjUqTXIYyh0s3zFY",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 13:41:14.077438
+Called: login
+Args:
+{
+    "username": "deshftgterw",
+    "password": "82740e66caa48ce22b00aed412a4b8d624250c789e94c4e71c69ea03468a293b",
+    "token": "03AAYGu2TjLc7WAbW668CTm0I1FZ_Ng4caFCPg72mj7xoCazhhjhYcAOr_6fylqHrIFnYUFu7_fRvjf1AnoW-0XE7_GrRGJf0Cuvsl6mktFMlknDZdBwD9QQFRZohdj_0ciBTgdLS0THacsUM-KDxNMZMLNdC9_79IpDtbIYem2KYlCB_iBATsZ_BF8-NJLQ36U71mjHnn-cL1vRbtTc_Z7es6GA90AmxxeSJ3h3Y3P-XbvjjX0j8xNWaCgaZ8L3jtgPOJlWaUled40bhoAT9ilYWQrdCmVfYHR0q2ojniYlJBycCYrXo1n7JNa2n4mVrU9JLErc3_8tXsy87FtwLC5OF3130fF-f_LeBRi64Uw64t1EMOVLAmP1WMFDMuQ3CtxYheTbL84v-lxra0IBY5AnDnTJ8shcGeIPP0DQN3Spr23DjI-LxETIe-T8b66uw-Dc_q_AGkS7MwM2_3GNo_M27BYxQrtUSHWOBFLt--vLhurXmF3FgAUC93Pi9x4-0cg_4JKJPDRe2r8JuqJnKS0OawSBpHPoOH2yzPh2ZAWJEeTJcV2leaGmX31T8Ws6NaE4sZWbsViOtAfctaNke22E4apauO7mzHMhreO2tTLawC3GD_EULRjlWYOZfLiOWiMqcf6u2HeIG6wbUpD-Fb5Ry2d4_zj-3XmVcWjPYy-IcLKqtRq6Fx9-FBSkgn8kccxf87vGxEayaTYn8M4mBhxciLxDe8J04z3ZC1IQgxehmRxwdC-ysmRjE5ixzczQahoEI-n61rwfxLczhJT_LX4ssi2L6MiOJfMpJS61vP26g3iDDysagOqabItiJzvsL_SXFPSbWowZa8jCtnOAIGwqa9glmTKZ-_JxA8XAczuHa7uoGlKCbyFzU5yLMEkuL9wodyCmALjXiHEjYHGiMtD6ZumSVWVxybKeT9v-euF_BobZwqh_DNf_2Dki6G06BLHu9vxPSz_Y3MNkDpyQK6AL0-wgfhcJ0C51SM4sUWmqDERJTnIXNUutTq4Rb7I2h8TXbpdfnfQuipEAduxSWbSpXDawbs5z4eolya65aWV--lzTaD-QQ04AVTpWn04rFwb6RRk7xOiLYKpA68nvmNn30hxBsX6T-U4kjz4oUew9l5Ort4FFodKXdNVVJEKZtjl9rQGewzkgY3DtHKppWX9uHdgSccLIhuqMb6BV7pcUz4NNbUWkoJtgZ4uHRN_1-GSc8UuiGHQGCAp8I8g5FGkr21_WzFs4xR_qLESnIdDx2yvp-RvSTfSasnk8o7cMOJM5wfUiu9-3MnS2tJE_79sZVizd8I0zeRRtuYWzj634ZvarnjQ1iFjIOM5RPdPaK7pkl085wbqE7n43eElCRxpRRy4U1ZG2DXKLdyhysytZINqZcJs_2ldZgfVKJL_0mPHWqDCYGGRHF-JNKbG0J8zCSgTnvPG8J0Y8S-MHHyb525TsJqy0R5L9k",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 14:47:17.087461
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2Rv4oYip3wATpvPL5YlEUdacUuIRVUqY6DIhF2WdgXWPI5Xy69NuJ4o1Lf1XbwyK-jcC4qGHyEb-8dGsu2aDKFNwdoi08a2bUXfz4qZiXtpxZCk7evrwNVbOuPlvYViAnL6wIXI6HbWPgrlWe6tHdKK-nhBc5NpkIspBmSsMU7JIyOKnScPs0MdAdMUWoBEZvyeA72wLzhoRyrMdYKrQJJYqs1iHvc6J-Cz1nl2k7Mpqhv2zo2JGa-hoRxqFA6CmQB0DVEDwzrWwAkUXP32Z4OZZXWjmY61jG7wpUfMpQiFCUTlcqOecMs71IO5qfxcDKWqQsdGnM0vVfLMUuFBu_D2NsfVmvymm-aDUD02lWKTv3FyvNY2cjM3TEITbxPLXEIgRzX9RFCiHF0xMfiU3mAWBaovtw2GZm4NhCCjTrH21Qj96WzzuTLjuI_-rFT4SF90-c3TWxYwH4M0bWb8wmPmgUT4e91F_eANfWhb74IB37TN98Ml08VK8IjOQm2zlAkSjFZFXN9ESEcZ09F7lPPkLC8lU8SXtIjuJAL0nXlBFHB0auvfZhFA3qV5b_5iZwX5TMG0u-CXwkpkGKPVsDT23CgEg2J4f7zaF4U9nzgbVru0pXz4WKftmut98POmAjQpqzbudT3cTkHBjj08SQ5dNi0sju9qlYhcU9Em7x5tauXk3w7iiD5HS-UC9owuTe0vaf4KHlWEUEHKB_XXAA_sJLlLXRDXolkghjpoenp7UDbi14nFkqLp825oCVfNPVwmJL0Q-fIR_XiFNVlUGyG865nao4o6cTg-8fCf-qI4qbhRrLXFJLaKNsGcP_I-T3dEzI_M4nuaC8cwW_-gNYEUiL62F6rHkmnxmw6iXeN8-y3B0fZh3cG_YtC2kIT4azo85CgRyAaRuysry0G_8N7CV0rzsvMwt3nrHSS-sEQ59pTIpJDE9Cr4PtF6j-xdRLaaKNkJiBJjzLXUiEw5sYZ1PqaSKprCQfn74xgPbwJga-cq8wM9_IvbYwKugeGAvNPAzwQtdEvkh02wCrNhIl22QcupMUnbL6rtMIJk3w0YNwBOjHTMSTlL0e_znBT4pARlfVu5Wwpyr2vNomcJNwlv5uepCiVajaT-kZ4_e7t8nk7hxIl5PSmNPbG6f1ms0jCF2y-tvMRCf-dTB4_iUNi3BVXbtYsgRZNi9kGMvp04jtXmub2NtXh4Q69ak-_dgI1dJfkkaPYEH6AYMSoDpx8uCEk19rZ2bBlpkFezddtk5ZDm5kI4ImYfzqOXN4PZz6-6pY13Bqr5g9ylCjmS5RFXCe_o2oKz_7d-D6l5dtd4hSNVO5sNoIqQDUrGgnP7ea42mD6T-2kCWZhv4Qy1jSlw8xRCc2dYERo4NuPjL945d52LGweEap1IQLdrKAlwwx2UI-A4_i0gbJfDqtx1_WsYnGLuDgGv4FooQBoF71uUsJ_SVfI",
+    "response": "<Response [200]>",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{'error': '', 'result': True, 'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 14:47:17.230250
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "pi",
+    "email": false,
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 14:49:31.442441
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2Q17e4ByTQN4eh-QFoX-94cpYzWyisTZ1YJ0sX6wIfrnCXeqgqU6mWRt_qdkcJH-PPBps4TR4mjCP0C4xMJXmQzSnigGyWuUSC9D-6Cbc4QnI8Rdz85XSejJ46X8KVnFVwPIvF08IATJ3rKCSLEFWlKhGCPQDkcSHYiQimTiz-207WWmBxyTkl1mZN_41G88MLm5wraQqF551DxVwL67rBiwKlU2Q8t07T0f4y3cOXFPLtX-H5s8uMLoqiuzX3c_48-4JxB-JxutNAtjFJ6XQ52FCseqC3Pi5MzxSA0oirZWU0MUu3Igc7M2rtSbgnKoxg1UchF07R3Gah-LlV4bwkD0jvCIksuZQyKQzx9mu_IcKv9jwP23zC84W3366hdLqtY555-oErNrlOaazfNk3w9qZqFh3XQeVNdAJd2E3TAoNH2N9aASGa7BS68qbgDqrUDMbNNIWeiknWrV0TfZqYQUId4PNY2XVkHvhY5qBTtNtOXLCENBrooV_56vWSj7oH4rve0_Xjzjz8n05jfFW88pZkBQ6BgQqxvWVCXmyfHsiLYNxmeRLiA1r2vXHV-khkEOvMwqHhbqZkPfUQ1MMWCVB3tJbjNfMEhaN1Q-RoePk7fy7QG62H2-tJ33AStobSW1j93MGRw69GJHz6DHSMj-LdE-dS83r9kvuCVx8i6GNXTjxmYNnfW9T3Ye0-Zg3yWfY7QdNWfqiZDap9z2C7K11sQ75MGO4qMahva6cTBE4SwL6iN-vU8rfrnCmZw9iHcGC80Up3yGrX5NTsjVc1BbzIEImhPbjPm0bAPy9z9YQARkSx9lv5WWEQlEXP7HXCosb5R_7a_GU2yuKdc-UhkHc6fItWkrbWgBx2x-KPRn-xbqTGNGP13jsPazEX0KpV6J1sbdYhdhztzOgPAJs0TjV_GAP7Xl9WzUReBx8AZXCsyL60jC57zMJkgDLRFrtMIpO-vKCcNNcBoQUbAgGX1c8EeBdyjdePEvs7mjQSQFFQ5d6WS-aZg2fR4XtaFUNGawYeIJEc2RPbdYllXT-kf1Uj_Kbcx-brKEnFqOvMBP3jmBrBessau7u3035UPL7GeqMVZY_C8cJs92r3wfqlFmwx1VsFVnTUNI2GHhPUiT2wk7lbeULZBGZc6ISHSjGVpupp60xzT3jJuuDLrrtd-_0P_dVQ23XZaQ8cSe56bH5yX_2HfccdtV3adQZmPWI2P1RtKTgjkwclutyzu0r6uhhz-UktCps2YsCSp59FkFbZm_yp6RgE0AkzcNG8CSbfjiA9uH-KK0KwSWlEBf0nfXwkSXGjK4zGiVekuhbamfP9N1TmaUsrUODa-l9Ydqv-iEBaBq1kERXWhBBe5OMNJNnBVL1zhfbfqHE3Wn4DCIUwITomIIdXtVs_9WdzzeBmoyC7s8nOdXA4DkTlcMqUHXLROEPPn412UhRaacsqmo2qJJoQ",
+    "response": "<Response [200]>",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{'error': '', 'result': True, 'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 14:49:31.575342
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "pi",
+    "email": false,
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 14:55:54.238347
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2SCMkV0O-piC5CFYH12OPvfgBXQ9owTmyEVRnEXoL_ML8P8CjAVFbENULMD8PXzBBAEIA9v9PO-lnVsoUxxbAsaMQePThFgXG6gCbfvhcpbTF3rPkutr5Pl_xomGAP5gGeMGUKMmBMLWTTyEI-TBNG6L0R49ooAJAHTI7VYRavEds9u3fcVEU3ZwQJe_DhaYUv8D6UaKGFYOj11C5utuJtprhRpkTMFCZR8HenvY69l3GtZrthUW0X1oPtXp90UPmqzFzRbNjyC26IJ4UytHYR1ZIkUFAgn2pRnDieOVZVvoivZD9Y4sXWnygn6lufAm_uW2vTwj1maMEC2TZ6DTvh0bUNyOYWRza7puRfCcP0UujBlcdBZHFdJBWwFnfCfKIEvjatZ3UZIoQ89dpBxXs8l8AAZ48Ib3Hl_ykjWjoq4AHb-oZiNzHiTMZYJWsTyjb5x473mABmIrUyEaDJInRYV-FCm050o1B93JtX6mjoceNfsoWnAFhlwl00y6pOJ3hRR9F7SwVWmQxCjaHHtwSNjAwRMh-BKMR5XbWK-bW7tfyZHLZ4vNsZkpJjYsOAC98B4mDqyZGYw4Y2A_zn0a6Pp31fbB81fO_O5k3jo2-5cBSJjvCJ_LCq5lTXaO5gkZOlzFInbwSTSKl6CggtgY5HyUB9nnJ3j0SPOpcuznohMXQtSJGyCfERhSU-75BXmxikbvsIFlLmUbFKWJ_OkPkowT7HmnNQDweaOV1m-rJTO5nl9eGinpwWxUOhdgdjYbMUSVwX4kLInbJ5yaa8PG6Xm_WI4e2AvJ4WGsD4ZpvKziAVM1W6Kqufe1t6QfG8i0pveiisu-PX67tmiVXxEQrrnjfBkz1_lAm9P8f8QJOfG2EoFW3pEwBGhoNZbhJhgNw80wbkwRSW9FvqEVv0_XkyXsX9ZVrKGtS-hu0dWgXXC8XMUv7sOkqrEemlri_OM82iimpczLyXw8RxEf0s8TbMLcNU_b7OKZjuckMlsIPFo5Bdbou8-HvxS7PBGAJgZuG8oqS7_X59a3IyiBRA8XJ6c-8wsvCgrwBtSTkI3zOxDvK1TBWjGJBlqSChg3vt16_1XqZIRW8OMAiSKxrYzCITSLNyKnIThgPlQrvW1FyIDgLxQ55iB6pOZC2cA0FqhYhdiCIbljan68_w4ugOdB4WvpmKICkcoqR9J3rmpmXelKNDUpYgC3uIMurnP9ybLDI5SGDKFE9CFuCik_ol1j50m2rwTYkbBYKvQR2hlQ5xxYyrvU6bFRLGpq94o2w-ks0CkWxRW1dEXW_Kronb_GWXqs5n-R9eCXMJrWhSY-YKnydWcDT6MUrgTjnGVx7ZCcJPKNwLhYx6zdoi4X4Z2KoUv2Q57YKDSSDcE5RjT8YrI8LG2oe6NWyX317PZEwh6K18k6hLBFeGySs0DDEou0jOAy5CPa1QWOqYKHETrTN9Jhi3tW9k",
+    "response": "<Response [200]>",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{'error': '', 'result': True, 'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 14:55:54.399018
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "pi",
+    "email": false,
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 15:59:06.625268
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 15:59:06.627456
+Called: register
+Args:
+{
+    "username": "QSDHB",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "email": "phgfull@gmail.com",
+    "phone": "666666666"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario QSDHB', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 16:56:35.074253
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 16:56:35.075252
+Called: register
+Args:
+{
+    "username": "adada",
+    "password": "eb754f7512ef99ebf6d031b1355b496c0ecec0f08bcd1f6d7a790a5a8264be0c",
+    "email": "phgfull@gmail.com",
+    "phone": "666666"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario adada', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 16:59:11.443073
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 16:59:11.443073
+Called: register
+Args:
+{
+    "username": "adadadada",
+    "password": "eb754f7512ef99ebf6d031b1355b496c0ecec0f08bcd1f6d7a790a5a8264be0c",
+    "email": "phgfull@gmail.com",
+    "phone": "6666666"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario adadadada', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:00:11.111177
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:00:11.112277
+Called: register
+Args:
+{
+    "username": "adada",
+    "password": "eb754f7512ef99ebf6d031b1355b496c0ecec0f08bcd1f6d7a790a5a8264be0c",
+    "email": "phgfull@gmail.com",
+    "phone": "6666666"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario adada', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:02:57.145165
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:02:57.146172
+Called: register
+Args:
+{
+    "username": "adada",
+    "password": "94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71",
+    "email": "phgfull@gmail.com",
+    "phone": "666666"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario adada', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:03:41.362595
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:03:41.362595
+Called: register
+Args:
+{
+    "username": "adadadad",
+    "password": "94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71",
+    "email": "phgfull@gmail.com",
+    "phone": "666666"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario adadadad', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:08:54.424198
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:08:54.425723
+Called: register
+Args:
+{
+    "username": "adada",
+    "password": "eb754f7512ef99ebf6d031b1355b496c0ecec0f08bcd1f6d7a790a5a8264be0c",
+    "email": "phgfull@gmail.com",
+    "phone": "66666"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario adada', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:55:14.014733
+Called: login
+Args:
+{
+    "username": "adadad",
+    "password": "d1103b4d6d8cfe1d667012b23e9ff32ec54c991db1096bb928ad2da7073ba858",
+    "token": "03AAYGu2RDGk-ODxgRNTXpIgv2t6EUPmwpfxC8SN_R_yXNWwsovh2WiErTwPxsFNKIKjSgz8H-OaUu4dvrmLcO3hKspBsIZM9rcNR2otJJSgkbPTDXYloC8FXwZL8NwFvYwkQpAKRGsE0D_vCQQU_ADrauSmW6F34Q-Gw4A8M54p1swT3Kt-vH6NtvTF0yBCg16C6wxd8ts9Ki-OkXRPJyLR8McVMiA41liT5erIeYchM7FA4toZDYQyxW92lbgBJlg3yUBKM4PtbpJpUmyi6EK1XltMGPRYIT_YPmi8Q0ktxJsZDI4GAxvVh5DWMVbaCGEAII6ENdcnNS176ncRJLHPJrlfSUTQgVJed3YG7avANzM-z3hA9q4xjC5z2kJ2abRwSqAPsTTI24DgFuYbzPmM61ioSqrdxzreMz9lTrVEhLMeIMOTbhkc1j2WS4rDeRayHXSgU00VH4l7OnxXI9fDD_Phm03jG6mCyoAXECYh5SzKxzX9qzrcPnfL7LlV0TkMUrzGE_1-w-qR9vuKCS7gC37ZJP_mr6MAQYIicO9Wk6h4YW_vGmOQLlY1GsGMFfMl1IVHGZ7EfBRxhHuDnYrp1hv3WEtX0Bmngy-Yt8Tqc-bfqchFbBOC7wKdH7qV-cs1K_AZyykVG-u54-XAW0wzhSiU2OS4oZOKcZwgvGKRsQMucW5apxIWpmooiOVjDUtfGhEQroKvccHGn4cY5-j9jxhcKoTfJKxZAmWTkERWULG1Lq328yyFNM9Xc1a1NPLMA8FUIz0mQXhQnUaPu4ioqRFne3FuZrQBxh__vOFGFie3wLeQvpmX3hO6DDiUq55RAN5ohiuhIDik-XFOBrqIgC3AU-Y11yabcc7yvJ2o9PNGfh2rsG59xiF93jCAB1YEDRdUIWbz4F9x284FFoTOnZeuwsE0Mz14oAwTpQHav7V7_qFueWbTPAR4JgT_xPB10sUd0q-zen7KishAvfOQ-EVDDziHHuUfqsfggWz5JmL3wVkoPEXRbFk9ESaKDivvJRQBsPrrJPiUb5iuY8djuBf24JsiJH4AX7NJl1HPRycrQ3OrownalvI_pORIHxeHpSdbOrK4vPCWe-RbA1vAWtp2RDzHCF_hQRB_A-_nkkGORdx-UkBoDCUsRi9U3kHD0YKaQ0yk3e2Mr2jwSCWh8vtnlqhb2naBBc5j5SHijiWgI26nBVXXGtNFQSwEBFYh8Dbo4ChcnC9aVykG3LOa-Lx240HQveBrzn1YoAp1XN0dyZXXZYx2yLXTgrcypEIO11zlq7_7IX8vaA_RCoYw6dfCLOqTmiZch5EY3h30y3wsGQe5dS0e8Jdt7HBspygj68kRZ03xvQVCuvaM8QwZuYr9wB6EUmC42z5lGGZo_E0yq2KSAkCpc3Q2NXFHHLxExoSxY94tma4YPOFTtefvFRGHIut58cE-SOcsDSqPSjh-xS9FAPnvrLVn3J0ShdEI5nbF4ZJo6f",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:57:06.313585
+Called: login
+Args:
+{
+    "username": "adadada",
+    "password": "1c255a3d204ff790e9f6942893d30b2344bf0e424e0a4aff26acdf77e57fe4d1",
+    "token": "03AAYGu2RsvT9ds09LBcfkegkKK7IN19lLyOwqF3EIcPnDK7GLmzrPtOkN-Wed0xqpjqlERN6b2GUFxkrlhqg0feUAzhT-e8fHdnqAyR-aDxRyBMN_HaG4nwBzqKxg2LpzjGp-gFKvClF8tvnkzejM4-kfhKQtzTtDYY8pHa2YIwC367LYbNadhUoY1FnknDhWb14sp0m8iptfXnpwf2ZbEVPMx_SiJEYBuqNNeuRgwJjlJiGtXUV0VgZ35mYWGqkP233tz-kVsriIB9xrHBfwUQe8lmho9ym91cqIl0-gW6TnXkkzi4emkwsW5jMi96jsqN1-wLZuXfh_Jmo6XfZFF9yzM7UTSoEwUpjYeW_f4MMJUprGclykYLV5J0LsKTXup-S0ZfSfT2pRCOJ_PgJFrcoyU3oxzzOInewgwD-ZVohWvcg6sAApAECN1Y3um5SfcW-vv8UHXdQFCh0kgGr5TOfUWO8fCVeyz3PHRb5MXgNHgoRTtkzGXXUpcxm1P9EPbpxXv-PA6P-dV6LGFVgjocT1imNJ6CmVumf1GoVAzCk2cpu3l5Oo3ozidmsMYyiFWB6Jb-grqTWou7u7PzmUWl090Mv1GP6SaBhU6BDVY5h0ezBFmFpImzpnl5qZhispW1ZsqVpiXT9zU2whgOwYFqvHzhkeutIcF3II_xC8m4kQJO5Dr9Y_6RVpBGmjVrOAlspJdFDPUuXmZ_OgPmJz77LQRK-vf-2Vf-YDHtsNqUN0UHkF2ASvi0w5_T6y2u06cHzJJfGlu1piOLCvyCxgL0c5btz4zK0bLKcKSl1P3AgSsjp1osAUoOqWO4WK-xLX7IBvGGtatntqHk6nieprNAxMugYDle4621_Xq9w3ZRIU4Rerve_HB4JGcbvTTukQCfOWBtHlePWt1t_bxoAv9vJyvFt7w94TbzA-yisiezoIToJAmSP8RRnbELynZLsDE3krevUnuzooqP3zeYwV6IlRXHI8PRgDyvcpIDJF4Lar0VsS27bgB42is11twPSyX5DsyC6v-3Pu2vo5xTOeswYAJ9kC9FLOgb9kTmvYtpIwCMzTKpTq-tGnzDASR694SvGcKbYoNEYPsRByULX6serPBEs0mj7RDlpsv6EO3lRBI9YdK9JW1OVranOzPTzvAqHz4HIvaLvhtexYiaLo79dbh8gqJ0engZ2qrKT9oqQNqZGbhd_RANiHrgwst2OJ3YHtK7evrBNPbiUnq7B_a2Sm3gvQk3J_kgzJzyZ38aY7h9x-wSlZtKkpyvKZZJCtlWnK1GChVCfba83GcjHGgkNdIKVDaqkHk3EXVVbFmjc3GkNZO_5XVGDwJVOlxFgBMGlhXa0vQujrhuFm13Dyv6K3ldMQY8K3hf43E_LoI7FAGON8WpdSHaM4ZNmZ9FdV0x7BpQY0vCf4bzV0XbTdq6QpcICKSrF7BayVLxF_IKUskOj0qlF_gq2xH3G-lSMfSmxhHvopb93C",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 17:57:40.876499
+Called: login
+Args:
+{
+    "username": "dadada",
+    "password": "8b3534a2a776f6bc2b4a2983f674648906af1afbbf05c552dcdef0445848f3ad",
+    "token": "03AAYGu2T3VrjgyPQrOG1bRTq7uCU2Qj-hOa00KXtaO-0zOP4LIUUXDMCsiNmmjIQuRONRmPKrjwyHUzIBORWH4b4J0Dz8-4-DsLGosI7RSMjkx36tlj7nGiJyPtC2e07Zxkc2gHl86aVcMx9fMbvOSK0GUidBnfexiziuWQfIZWCYZulKiEWs21dHGLBlpMNde4kjn0gMwv_RARYhQI27aHBe0Ls3GSvueM4QKuq89ZTVJFo4x_RpY0tUs65ztvAV9wixpSiM7_TATw1jKoUmXNYM3q9WPPDcvhdk78r5hCA_u5bEkQlUFWHjzHfx4EP9LVMEl0l4NdtLp42Oj4VHe5o3OeOD7aLRCoa-Oo6qsl_BzpxvTE4ywAe_68Nr5sXPKK5hTW0wMaBP0PwtxyRu82F1vD4iYeyOBZsQlwo1X9CMpFw-E3SkXNeeU7Hfy2Kbq4qUr4v0sB8rTy-GPuEVl7bvv0XNnoxaOZY5iC1li_z4gpUR1KyVtl4au6lTPUAuWu-EEthn7peM6zWtL9rlkGLu21Rt1LfEknRBtd1sVfOzaVq445K-s8l1p7NzXIN9fP385bPXJV5n9rJPNoGexBVM0sz-uiwXDxzJDlFIL0vdGDzwzmamOtD5kg6KYctD8cjAbh_g_JsN3eUX01pvLZ7AjSxGBhc8LOy687wk91ezu2tCnDotSREpFbyDmTxYfSWf1Zg63Lt-l0UmCR7XENCu_CfOix92Gg1JxfCCAU2pDCy9ftdw37hA0bLMqZHGenMSaXwfDAxrGjsVFJ89hV9zDHB8Ca6AVPpV_kNGroAw2Nbqr4u9s6RoDDARA8wucg0aaIa-k27AWjuHCdz2qErzMJgP5qBtkK5y55bFVtunpehvNblNsegjwxKvwzJfpoTE7gXHyY8I69_9EHIaLv-IMMqVLNOr_FcRkB2yH5f7b89-fjaQoCG2vhmrrZKz1u1ioL0whIXvQIYyxQeykMH3pppBigg5fDwlhVJSsKYWSFpWIaBBnxf-eH91U98ArW1_MScu5WpvPtkod1gidpkOrA7ygJz3Rsgv0mQ6nmF-aHlcnJu0ez0DR3G-u37JJtk1kTmeA1PhPtKi3rbzr4MYO85eisQcnaCF9VYY0zv7L7a4fHbVzAekueaa2F9MlAoRgOMHRLjDwTLuxJxKjCnzdoI4sG-MiKoT41wOdwYfBiH5RiSeOExLqwNCYxwBNcvao5VjCtDMLaZAj9x814hkXY6IkFguI3hd13Bs4MhV_wITJsLf-EJoGP9VvSpM87tt3aeEB3SWTlc3-qUT5BQaOquhi35_U4NDcbU9V61Ztbam_X5yeqBMXKHrK47i8ZYoyx8Dhvc60wHO6h42s_DBZ4D7SKqnWpbT8KPzYQfO-F8y9-_g9Q9wKiNfLPYHHHbwg-gVQUVvxwU-ZeeAOvW2o7WBK8eBlx8jReouu4mEc7oKi5PJHiy_3K7Hic0tmVams03IsoN6",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 18:17:48.761550
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2Q1AdwcCmQza8XxW48l0CYqrfKws_194pR_sfXBNCYNVF5mRcfL5aLQ3KzNwQWLIi1AXI4s1e74JXI911Fb8UMPLZaSbHrAOIcDZZ8K9gM8m8-d9ptn62AubkW1Z4uJVqTz1lfc9ffNzvRjvv4gC7Wx6RyCIEj9H0Llaki5zucQ8y-X_j1QFNJwMmQE1tgkXFCpwb0WPN18i0ynCx2zgawI5aemX-vJ80X5UsKnq53N8v0p-N0JovlS3YddWHSUw5TV-u6DTDai0CLk8tW0x2f4vY0iPAmfbzkVKT-OD9imUKzjlDsOOL9RFe9uSbEcXcDYn7tMNtVS8CB_WnT2DLitBydqEL-G7FXIw8leuaKLbrbaWS4v_7EhJ2YxjWzjtuNgxX3TABKWofU68wYd4aXQgD81YzuYR3vI0y7yVHC6a1toJdDCM5Tof-M-WaF9nuBew3vAscpdu1KKKCRrfcZRx95KmOcPAZgpvOZWhEEEa1J62s4LnlPVwZ5JSd5QUphyNA9i6vyxQdE6xv1-7TXpA6efnFTCPOwblrA2OOCrA7Cf7MKmb2_Ant0gJcV2AaaHAdqTXwdnO53WrQdvDmkX91HARvTzu_3ou5imbGy1oOSoRnl8Cd0Q6eaazmNMUCH10GtlFWaRF2vDO99i5xl3KT22PoN1s6IEkVXjWcJoKK4gjI6EtP2yAM4h_uDghXpEuY3f3t8nxRGRqSOvDyI3f6QwbM1XwVIGXM5ZTc5GUbdvNRvAsSg1zCAq1Zn0uw_tNK67iI5BfxinbpmpKHAVkUwoIxiH93o-9hPi-SSU2iaHZ0tLUZk_ydvcE1-ifLSTFQyIZ5dbrnCkPzuVkeImq1qdynygmOlGb12ajYhCER3K010gG4RNEZfatKfh9OgFUmAF-xPuJ2NRNtbQhfhc0ST61HFAbbk-_hpI-3C-2u09apk7wOlhLEC-5vp0ii7g-kfeZ6juPAnza7uDBRgPQhmKqEImBm5fGPL7rTJFzNzj5LXwNJ2Xi4QVpEyJna4pdCYOTYAAr8sNyPmKfaJ3KhPDUrzObC3p1cHEQ9c_7f8BPVcu99gKVa2lnwYvG-07eGwU9CyhvFuO0RIAnzvue2ryhBlm6p3Q1jfNyM9w14LE5mriYxggaJ1SZ_ylRbHP-wnzRk4aw8hsmQVBV200_YBNpBlYLu2lMNZlyJWd77Fw-N_ZzCbgj9hpkfLXHfvDQ0UD8aZPfdb8mmYtAw-qNc8tN22rCxS-QO7CGU2qgLxUaK_fIOMcZyUqAP8lCqR10SNsQGaFnGFiYTfsK-ZhjnmIqs4tyVWbb8SiCBngv6Sj6ZK8tfnIL5kUPdhrtBCOE-Iu8FKhfNhEGCigirNWI0qtbFzRJb5j26cU6PqUriHFvkkdQp66Llezy1oIl37qnp1_V0vaYa60ZSdKzl9yHSj1Z00ZuQGQaaaEM5G9Mh85JLctJf_lvxswWZ9n6WIR-mgP",
+    "response": "<Response [200]>",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{'error': '', 'result': True, 'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-11 18:17:49.157724
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "pi",
+    "email": false,
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "2222222222",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': '',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '2222222222',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->

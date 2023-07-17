@@ -158,7 +158,7 @@ def updatePhone(username):
 
                 connector.client.FULL.users.update_one({"username": username}, {"$set": {"phone": phone}})
 
-                emailManager.sendEmailChanged(result['email'], username)
+                emailManager.sendPasswordChanged(result['email'], username)
 
                 return ret("Teléfono del usuario " + username + " actualizado correctamente")
             else:
@@ -363,7 +363,7 @@ def registerToken(username):
     caracteres = string.ascii_letters + string.digits
     caracteres = caracteres.replace('"', '').replace("'", '').replace("`", '')
 
-    token = ''.join(random.choice(caracteres) for _ in range(32))
+    token = ''.join(random.choice(caracteres) for _ in range(8))
 
     try:
         connector.client.FULL.users.update_one({"username": username}, {"$set": {"token": token}})

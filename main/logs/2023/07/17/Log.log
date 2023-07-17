@@ -1,0 +1,65 @@
+
+
+Date: 2023-07-17 12:40:27.536898
+Called: login
+Args:
+{
+    "username": "pi",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AAYGu2R0KhZifVHLTIjU4DXondkxkk5cpIKa4wrW0oKGO2LARAbDNZILBu-3cTDSZ21eX5s4-cRe5uw1HZ0jak9CwjzpW46JfhSw11XGBaNgSUVae1u5-XJQso_06P73o2fNUQSeXPrz4DQdesbYFOfTTPCP7ysm4ev3H4T08NL2hECOzjEiGHHJQg1tZrfRw-tAYbrTF1q9kltmvkVxAqUwqYk0DueC4mFDMs8ti1nfhXS3syZlDEccMPT1qpxw1NiYOw44Zh8tygjvlv8pd0KqNszqkYhOJSRoemaWxem-QiGJOkThHdZqlJOOKwQ5ye6mJ1ekBxs0PtJScEJ2Cj_awfFgS0vqx6Uodz5VYeEZ23OcgI7N-uipuA0ZPn2Xfej7NzX5FC4ly6yOatZ30aRE3Z2FH29k16ci0_SWFtw4wqtR4qA7pyOQamx2cNwDS8pBOxrZuHYd6Wb5Jqe_vWbKhtsWOWHfgkIRrJVb51g6pdan2n8nyyM3sHHwnPfxyevybVK3KfWL5u8MjF-FQA6rCD4yEfPPa19A0LDw7dVG2uGmOTg1qeJttwZd-8lN3AjoMJ3bkNMVSA0w7F1Umg_O7MJVI2qjF8ZNYP6gj2NHVcGTTY7Vywya6nOUJlB95HpmBta4lWAdNhh4CPRPOQVz5ezbv3-iiF1QVu73r4LGCS0oSFjJx5unuiIgLggd6bLnwQeo9BUXSDS-j5OuCo8nWWdiuQjcUolp52tAoDZSuE9o4WrfqAuKfJBOsGsO5s84NEhq-Y4aoP_F57qGTANlweOJ1MUIOraTSFLhEfIUWfHIBRlAdbxpWg9RB6VHGXR3SdLQnM9PidwBseK9oCeqGnEIpdmUjTLjNLACD_lh_9MD43K1iuPLR6myHz1lEC9VI8WQJVI0mrkqIwmnre6gTgjIi2WpsNGwLuTREa5YzynMYzhs6yTN4NNRQNKl9TdqBaUhzziikOC-1kTdrmh_AzpMKFmHWDJUtN5FUzyO6CYNAmaBDrwpuZAEEMFp5GE5U2f6Hkv9OybluKHPDW54YO9y-VMZhVktychQr43yGLJTBGS-4KNRV0b3qouT4rCOeU39-WhMt5ZIEFWqR5Mng4KrYaHdl1uIpeFOB9RKsB-KgUn4VcvVIbL5y4JA9WHPa-zLt3hF5Tb2JjOWnMoW__kAMsYLd4EEQ4e1c55Fa7PVMTHm_XUJ5FVitf6pV-oVmKwqoIcFzY_-pSNEoQ22Fw19uMltc7fqYu4khMCnAjgjaQmVcSu7mXxI1bEOfIR_Ag5f6H1S9zcTRryS6JWyiS_jJZtv2xAs5D6Mez8klJcjLUV4yddSoNkRPdfHTF-XwbgemOxTYe0jbBt2f5Au3dAC4iBHjaGQlPg9aIvKtT8jbEf_Sl4RGtiD3wAR3evR1XvywNOsIFjBh7PRMdsL-faeUqzbbL7yAfWiJPH6Xy8HGxhw7jD-Vg1SwmDz8663B_TUwUVpNJxN_h6zJhf14UxgmnRG3A",
+    "response": "<Response [200]>",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+        "email": "phgfull@gmail.com",
+        "phone": "66666666666666666",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "adadad",
+        "token": ""
+    }
+}
+Response:
+{'error': '', 'result': True, 'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-17 12:40:27.632520
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "pi",
+    "email": false,
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "66666666666666666",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "adadad",
+        "token": ""
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': 'adadad',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '66666666666666666',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->

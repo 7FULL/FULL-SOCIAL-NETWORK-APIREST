@@ -1,2 +1,2 @@
-# FULL-API
+# FULL-APIREST
 API for FULL

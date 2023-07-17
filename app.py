@@ -19,7 +19,7 @@ connector = BBDD()  # Conexión a la BBDD de MongoDB
 emailManager = EmailManager()
 
 
-
+ 
 # Funcion para no tener estar formateando el json tod el rato
 def ret(result, status=200, error=""):
     text = jsonify({

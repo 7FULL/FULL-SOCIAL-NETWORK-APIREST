@@ -85,7 +85,6 @@ def getUsers():
     except Exception as e:
         return ret("Error al obtener los usuarios", 500, str(e))
 
-
 @user.route('/api/users/<string:username>')
 def getUserByNameOrEmail(username, email=False):
     try:
@@ -112,7 +111,6 @@ def getUserByNameOrEmail(username, email=False):
 
     except Exception as e:
         return ret("Error al obtener el usuario " + username, 500, str(e))
-
 
 @user.route('/api/users/email/<string:username>', methods=['PUT'])
 def updateEmail(username):
@@ -142,7 +140,6 @@ def updateEmail(username):
     except Exception as e:
         return ret("Error al actualizar el email del usuario " + username, 500, str(e))
 
-
 @user.route('/api/users/phone/<string:username>', methods=['PUT'])
 def updatePhone(username):
     phone = request.json['newPhone']
@@ -168,7 +165,6 @@ def updatePhone(username):
 
     except Exception as e:
         return ret("Error al actualizar el teléfono del usuario " + username, 500, str(e))
-
 
 @user.route('/api/users/profile/<string:username>', methods=['PUT'])
 def updateProfile(username):
@@ -214,7 +210,6 @@ def updateProfile(username):
 
     else:
         return ret("No se ha enviado ningun archivo", 404)
-
 
 @user.route('/api/users/password/<string:username>', methods=['PUT'])
 def updatePassword(username):

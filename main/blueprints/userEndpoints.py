@@ -341,12 +341,17 @@ def register():
     email = request.json['email']
     phone = request.json['phone']
 
+    caracteres = string.ascii_letters + string.digits
+    caracteres = caracteres.replace('"', '').replace("'", '').replace("`", '')
+
+    token = ''.join(random.choice(caracteres) for _ in range(8))
+
     password = hash_password(password)
 
     if getUserByNameOrEmail(username, email).json['status'] != 200:
         try:
             user = User(username, password, email, phone, connector)
-            user.register()
+            user.register(token)
 
             emailManager.sendWelcomeEmail(email, username)
 

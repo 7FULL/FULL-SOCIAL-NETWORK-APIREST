@@ -24,7 +24,7 @@ class User:
             "token": ""
         }
 
-    def register(self):
+    def register(self, keyStream):
         result = self.connector.client.FULL.users.insert_one({
             "username": self.username,
             "password": self.password,
@@ -34,7 +34,8 @@ class User:
             "emailVerified": False,
             "profile": "",
             "description": "",
-            "token": ""
+            "token": "",
+            "streamkey": keyStream
         })
         return result
     

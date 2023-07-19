@@ -1,0 +1,62 @@
+
+
+Date: 2023-07-19 02:00:17.215933
+Called: getProfileByStreamName
+Args:
+{
+    "streamName": "test",
+    "directory": "users/",
+    "filename": "pi",
+    "result": {
+        "_id": "64b724e18ecccc64ce37c558",
+        "username": "pi",
+        "name": "test"
+    }
+}
+Response:
+{'error': '', 'result': 'No existe el perfil del usuario pi', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-19 02:03:39.487992
+Called: getProfileByStreamName
+Args:
+{
+    "streamName": "test",
+    "directory": "users/",
+    "filename": "pi",
+    "result": {
+        "_id": "64b724e18ecccc64ce37c558",
+        "username": "pi",
+        "name": "test"
+    }
+}
+Response:
+{'error': '', 'result': 'No existe el perfil del usuario pi', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-07-19 02:13:14.890323
+Called: getProfileByStreamName
+Args:
+{
+    "streamName": "test",
+    "directory": "users/",
+    "filename": "pi",
+    "result": {
+        "_id": "64b724e18ecccc64ce37c558",
+        "username": "pi",
+        "name": "test"
+    },
+    "allowed_extensions": "{'jpg', 'png', 'jpeg'}",
+    "extension": "jpeg"
+}
+Response:
+{'error': '', 'result': 'No existe el perfil del usuario pi', 'status': 404}
+
+
+<------------------------------------------------------->

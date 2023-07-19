@@ -170,13 +170,10 @@ def updatePhone(username):
 def updateProfile(username):
     if 'profile' in request.files:
         try:
-            oldProfile = connector.client.FULL.users.find_one({"username": username})['profile']
-
-            if oldProfile:
-                os.remove("users/" + oldProfile)  # Eliminar el archivo antiguo
+            os.remove("users/" + username)  # Eliminar el archivo antiguo
 
             file = request.files['profile']
-            filename = file.filename
+            filename = username
 
             if filename == '':  # Nombre de archivo vacio
                 return ret("El nombre del archivo no puede estar vacio", 400)
@@ -198,7 +195,7 @@ def updateProfile(username):
             file.save("users/" + filename)  # Guardar el archivo en la carpeta users
 
             try:
-                connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": filename}})
+                connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": username+"."+extension}})
 
                 return ret("Foto del usuario " + username + " actualizada correctamente")
 
@@ -236,7 +233,6 @@ def updatePassword(username):
     except Exception as e:
         return ret("Error al actualizar la contraseña del usuario " + username, 500, str(e))
 
-
 @user.route('/api/users/profile/<string:username>', methods=['GET'])
 def getProfile(username):
     directory = "users/"
@@ -251,7 +247,6 @@ def getProfile(username):
     except Exception as e:
         return ret("Error al obtener la foto de perfil del usuario " + username, 500, str(e))
 
-
 @user.route('/api/users/description/<string:username>', methods=['PUT'])
 def updateDescription(username):
     description = request.json['description']
@@ -263,7 +258,6 @@ def updateDescription(username):
 
     except Exception as e:
         return ret("Error al actualizar la descripción del usuario " + username, 500, str(e))
-
 
 @user.route('/api/users/<string:username>', methods=['DELETE'])
 def deleteUser(username):
@@ -294,7 +288,6 @@ def deleteUser(username):
 
     except Exception as e:
         return ret("Error al eliminar el usuario " + username, 500, str(e))
-
 
 @user.route('/api/users/login', methods=['POST'])
 def login():
@@ -328,7 +321,6 @@ def login():
     else:
         return ret(response.json(), 498, "Creemos que eres un robot")
 
-
 @user.route('/api/users/register', methods=['POST'])
 def register():
     username = request.json['username']
@@ -357,7 +349,6 @@ def register():
     else:
         return ret("Ya existe el usuario " + username, 409)
 
-
 @user.route('/api/users/registerToken/<string:username>', methods=['GET'])
 def registerToken(username):
     caracteres = string.ascii_letters + string.digits
@@ -377,7 +368,6 @@ def registerToken(username):
     except Exception as e:
         return ret("Error al actualizar la descripción del usuario " + username, 500, str(e))
 
-
 @user.route('/api/users/checkToken/<string:username>', methods=['POST'])
 def checkToken(username):
     token = request.json['token']  
@@ -393,3 +383,30 @@ def checkToken(username):
             return ret(True)
         else:
             return ret(False, 401, "Token incorrecto")    
+
+@user.route('/api/users/getProfileByStreamName/<string:streamName>', methods=['GET'])
+def getProfileByStreamName(streamName):
+    directory = "users/"
+    filename = ""
+
+    try:
+        result = connector.client.FULL.streams.find_one({"name": streamName})
+
+        if result:
+            filename = result['username']
+        else:
+            return ret("No existe el stream " + streamName, 404)
+
+    except Exception as e:
+        return ret("Error al obtener la informacion del stream " + streamName, 500, str(e))
+
+    try:
+        allowed_extensions = {'png', 'jpg', 'jpeg'}
+        for extension in allowed_extensions:
+            if os.path.exists(directory + filename + "." + extension):
+                return send_file(directory + filename + "." + extension)
+        else:
+            return ret("No existe el perfil del usuario " + filename, 404)
+
+    except Exception as e:
+        return ret("Error al obtener la foto de perfil del usuario " + filename, 500, str(e))

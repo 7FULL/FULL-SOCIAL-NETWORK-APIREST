@@ -155,7 +155,7 @@ def updatePhone(username):
 
                 connector.client.FULL.users.update_one({"username": username}, {"$set": {"phone": phone}})
 
-                emailManager.sendPasswordChanged(result['email'], username)
+                emailManager.sendPhoneChanged(result['email'], username)
 
                 return ret("Teléfono del usuario " + username + " actualizado correctamente")
             else:
@@ -239,10 +239,12 @@ def getProfile(username):
     filename = username
 
     try:
-        if os.path.exists(directory + filename):
-            return send_file(directory + filename)
+        allowed_extensions = {'png', 'jpg', 'jpeg'}
+        for extension in allowed_extensions:
+            if os.path.exists(directory + filename + "." + extension):
+                return send_file(directory + filename + "." + extension)
         else:
-            return ret("No existe el perfil del usuario " + username, 404)
+            return ret("No existe el perfil del usuario " + filename, 404)
 
     except Exception as e:
         return ret("Error al obtener la foto de perfil del usuario " + username, 500, str(e))

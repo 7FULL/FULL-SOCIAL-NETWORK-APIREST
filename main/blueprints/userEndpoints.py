@@ -11,10 +11,8 @@ from main.logs.log import Logger
 import random
 import string
 
-
 connector = BBDD()
 emailManager = EmailManager()
-
 
 user = Blueprint('user', __name__)
 
@@ -64,6 +62,15 @@ def hash_password(password):
     return hashed_password
 
 
+def generateToken(token_lenght=8):
+    caracteres = string.ascii_letters + string.digits
+    caracteres = caracteres.replace('"', '1').replace("'", '2').replace("`", '3')
+
+    token = ''.join(random.choice(caracteres) for _ in range(token_lenght))
+
+    return token
+
+
 @user.route('/api/users')
 def getUsers():
     try:
@@ -84,6 +91,7 @@ def getUsers():
 
     except Exception as e:
         return ret("Error al obtener los usuarios", 500, str(e))
+
 
 @user.route('/api/users/<string:username>')
 def getUserByNameOrEmail(username, email=False):
@@ -107,10 +115,11 @@ def getUserByNameOrEmail(username, email=False):
 
                 result['_id'] = str(result['_id'])  # Convertir el ObjectId en un string
                 return ret(result)
-            return ret("No existe el usuario " + username, 404)
+            return ret("No existe el usuario " + str(username), 404)
 
     except Exception as e:
         return ret("Error al obtener el usuario " + username, 500, str(e))
+
 
 @user.route('/api/users/email/<string:username>', methods=['PUT'])
 def updateEmail(username):
@@ -140,6 +149,7 @@ def updateEmail(username):
     except Exception as e:
         return ret("Error al actualizar el email del usuario " + username, 500, str(e))
 
+
 @user.route('/api/users/phone/<string:username>', methods=['PUT'])
 def updatePhone(username):
     phone = request.json['newPhone']
@@ -165,6 +175,7 @@ def updatePhone(username):
 
     except Exception as e:
         return ret("Error al actualizar el teléfono del usuario " + username, 500, str(e))
+
 
 @user.route('/api/users/profile/<string:username>', methods=['PUT'])
 def updateProfile(username):
@@ -195,7 +206,8 @@ def updateProfile(username):
             file.save("users/" + filename)  # Guardar el archivo en la carpeta users
 
             try:
-                connector.client.FULL.users.update_one({"username": username}, {"$set": {"profile": username+"."+extension}})
+                connector.client.FULL.users.update_one({"username": username},
+                                                       {"$set": {"profile": username + "." + extension}})
 
                 return ret("Foto del usuario " + username + " actualizada correctamente")
 
@@ -208,17 +220,21 @@ def updateProfile(username):
     else:
         return ret("No se ha enviado ningun archivo", 404)
 
+
 @user.route('/api/users/password/<string:username>', methods=['PUT'])
 def updatePassword(username):
     oldPassword = request.json['oldPassword']
     newPassword = request.json['newPassword']
-
     try:
         result = connector.client.FULL.users.find_one({"username": username})
 
+        # En caso de que el usuario no exista por username comprobamos si existe por token
+        if not result:
+            result = connector.client.FULL.users.find_one({"token": username})
+
         if result:
             result['_id'] = str(result['_id'])
-            if result['password'] == hash_password(oldPassword):
+            if result['password'] == hash_password(oldPassword) or result['token'] == oldPassword:
                 connector.client.FULL.users.update_one({"username": username},
                                                        {"$set": {"password": hash_password(newPassword)}})
 
@@ -232,6 +248,7 @@ def updatePassword(username):
 
     except Exception as e:
         return ret("Error al actualizar la contraseña del usuario " + username, 500, str(e))
+
 
 @user.route('/api/users/profile/<string:username>', methods=['GET'])
 def getProfile(username):
@@ -249,6 +266,7 @@ def getProfile(username):
     except Exception as e:
         return ret("Error al obtener la foto de perfil del usuario " + username, 500, str(e))
 
+
 @user.route('/api/users/description/<string:username>', methods=['PUT'])
 def updateDescription(username):
     description = request.json['description']
@@ -260,6 +278,7 @@ def updateDescription(username):
 
     except Exception as e:
         return ret("Error al actualizar la descripción del usuario " + username, 500, str(e))
+
 
 @user.route('/api/users/<string:username>', methods=['DELETE'])
 def deleteUser(username):
@@ -290,6 +309,7 @@ def deleteUser(username):
 
     except Exception as e:
         return ret("Error al eliminar el usuario " + username, 500, str(e))
+
 
 @user.route('/api/users/login', methods=['POST'])
 def login():
@@ -323,6 +343,7 @@ def login():
     else:
         return ret(response.json(), 498, "Creemos que eres un robot")
 
+
 @user.route('/api/users/register', methods=['POST'])
 def register():
     username = request.json['username']
@@ -330,17 +351,14 @@ def register():
     email = request.json['email']
     phone = request.json['phone']
 
-    caracteres = string.ascii_letters + string.digits
-    caracteres = caracteres.replace('"', '').replace("'", '').replace("`", '')
-
-    token = ''.join(random.choice(caracteres) for _ in range(8))
+    streamKey = generateToken()
 
     password = hash_password(password)
 
     if getUserByNameOrEmail(username, email).json['status'] != 200:
         try:
             user = User(username, password, email, phone, connector)
-            user.register(token)
+            user.register(streamKey)
 
             emailManager.sendWelcomeEmail(email, username)
 
@@ -351,40 +369,53 @@ def register():
     else:
         return ret("Ya existe el usuario " + username, 409)
 
-@user.route('/api/users/registerToken/<string:username>', methods=['GET'])
-def registerToken(username):
-    caracteres = string.ascii_letters + string.digits
-    caracteres = caracteres.replace('"', '').replace("'", '').replace("`", '')
 
-    token = ''.join(random.choice(caracteres) for _ in range(8))
+@user.route('/api/users/registerToken/<string:username>', methods=['GET'])
+def registerToken(username, token_lenght=8, email=True):
+    token = generateToken(token_lenght)
 
     try:
-        connector.client.FULL.users.update_one({"username": username}, {"$set": {"token": token}})
-
         result = connector.client.FULL.users.find_one({"username": username})
 
-        emailManager.sendTokenSended(result['email'], result['username'], token)
+        # Comprobamos si el usuario existe
+        if not result:
+            # Comprobamos si existe el usuario por email
+            result = connector.client.FULL.users.find_one({"email": username})
+
+            if not result:
+                return ret("No existe el usuario " + username, 404)
+            else:
+                connector.client.FULL.users.update_one({"email": username}, {"$set": {"token": token}})
+
+        else:
+            connector.client.FULL.users.update_one({"username": username}, {"$set": {"token": token}})
+
+        if email:
+            emailManager.sendEmailVerification(result['email'], result['username'], token)
 
         return ret("Token del usuario " + username + " actualizado correctamente")
-    
+
     except Exception as e:
-        return ret("Error al actualizar la descripción del usuario " + username, 500, str(e))
+        return ret("Error al actualizar el token del usuario: " + username, 500, str(e))
+
 
 @user.route('/api/users/checkToken/<string:username>', methods=['POST'])
 def checkToken(username):
-    token = request.json['token']  
-        
+    token = request.json['token']
+
     result = connector.client.FULL.users.find_one({
         "username": username
-    })  
+    })
 
     if result:
         result['_id'] = str(result['_id'])
         if result['token'] == token:
-            connector.client.FULL.users.update_one({"username": username}, {"$set": {"token": "", "emailVerified": True}})
+            connector.client.FULL.users.update_one({"username": username},
+                                                   {"$set": {"token": "", "emailVerified": True}})
             return ret(True)
         else:
-            return ret(False, 401, "Token incorrecto")    
+            return ret(False, 401, "Token incorrecto")
+
 
 @user.route('/api/users/getProfileByStreamName/<string:streamName>', methods=['GET'])
 def getProfileByStreamName(streamName):
@@ -412,3 +443,22 @@ def getProfileByStreamName(streamName):
 
     except Exception as e:
         return ret("Error al obtener la foto de perfil del usuario " + filename, 500, str(e))
+
+
+@user.route('/api/users/passWordRecovery/<string:username>', methods=['POST'])
+def passWordRecovery(username):
+    # Generamos uno de 16 ya que se va a poner en la url el usuario no la va a tener que escribir asique nos da igual
+    result = registerToken(username, 16, False)
+
+    if result.json['status'] == 200:
+        result = getUserByNameOrEmail(username, username)
+
+        if result.json['status'] == 200:
+            link = "http://localhost:9000/recoveryPassword/" + result.json['result']['token']
+
+            emailManager.sendPasswordRecovery(result.json['result']['email'], result.json['result']['username'], link)
+            return ret("Email enviado correctamente")
+        else:
+            return ret("No existe el usuario " + username, 404)
+    else:
+        return result

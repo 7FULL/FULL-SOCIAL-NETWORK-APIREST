@@ -53,6 +53,9 @@ class Logger:
 
     @staticmethod
     def log_error(response, arg, name):
+        # Ademas de registrarlo en el archivo de log, lo registramos en el archivo de errores
+        Logger.log(response, arg, name)
+
         # Obtener la fecha actual
         fecha_actual = datetime.now()
         dia_actual = fecha_actual.strftime("%Y/%m/%d")
@@ -61,7 +64,7 @@ class Logger:
             os.makedirs("main/logs/" + dia_actual)
 
         # Escribir el mensaje en el archivo junto con la fecha actual
-        with open("main/logs/" + dia_actual + "/Log.log", "a") as f:
+        with open("main/logs/" + dia_actual + "/LogError.log", "a") as f:
             try:
                 arg.locals['response'] = f"{arg.locals['response']}"
 

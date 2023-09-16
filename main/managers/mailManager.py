@@ -695,5 +695,114 @@ class EmailManager:
         result = self.mailjet.send.create(data=data)
 
         return result.status_code
-# print(result.status_code)
-# print(result.json())
+
+    def sendPasswordRecovery(self, email, name, link):
+        data = {
+            'Messages': [
+                {
+                    "From": {
+                        "Email": "phermidagomez@gmail.com",
+                        "Name": "FULL"
+                    },
+                    "To": [
+                        {
+                            "Email": email,
+                            "Name": name
+                        }
+                    ],
+                    "Subject": "Recuperación de contraseña",
+                    "HTMLPart": '''
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <meta charset="UTF-8">
+              <title>Recuperación de contraseña</title>
+              <style>
+                /* Estilos generales */
+                body {
+                  font-family: Arial, sans-serif;
+                  background-color: #f6f6f6;
+                  margin: 0;
+                  padding: 0;
+                }
+
+                /* Contenedor principal */
+                .container {
+                  max-width: 600px;
+                  margin: 0 auto;
+                  padding: 20px;
+                  background-color: #ffffff;
+                }
+
+                /* Encabezado */
+                .header {
+                  text-align: center;
+                  margin-bottom: 20px;
+                }
+
+                .header h1 {
+                  color: #333333;
+                  font-size: 24px;
+                }
+
+                /* Contenido */
+                .content {
+                  padding: 20px;
+                  background-color: #f9f9f9;
+                }
+
+                .content p {
+                  color: #555555;
+                  font-size: 16px;
+                  line-height: 1.5;
+                  margin-bottom: 20px;
+                }
+
+                /* Botón de verificación */
+                .verification-btn {
+                  display: inline-block;
+                  background-color: #4caf50;
+                  color: #ffffff;
+                  text-decoration: none;
+                  padding: 10px 20px;
+                  border-radius: 4px;
+                  font-size: 16px;
+                }
+
+                /* Pie de página */
+                .footer {
+                  text-align: center;
+                  color: #777777;
+                  margin-top: 20px;
+                }
+              </style>
+              
+            </head>
+            
+            <body>
+              <div class="container">
+                <div class="header">
+                  <h1>Recuperación de contraseña</h1>
+                </div>
+                <div class="content">
+                  ''' + "<p>Hola, " + name + '''
+                                  </p>
+                  <p>Para recuperar tu contraseña, haz click en el siguiente enlace:</p>
+                  <a href="''' + link + '''">
+                    <button class="verification-btn">Recuperar contraseña</button>
+                  </a>
+                </div>
+                <div class="footer">
+                  <p>No responda a este correo electrónico. Si necesita ayuda, contáctenos en phermidagomez@gmail.com
+                    </p>
+                </div>
+                </div>
+            </body>
+            </html>
+            '''
+                }
+            ]
+        }
+        result = self.mailjet.send.create(data=data)
+
+        return result.status_code

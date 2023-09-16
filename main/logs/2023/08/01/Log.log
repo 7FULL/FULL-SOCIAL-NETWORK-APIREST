@@ -1,0 +1,264 @@
+
+
+Date: 2023-08-01 16:57:53.379090
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "7FULL",
+    "email": false,
+    "result": null
+}
+Response:
+{'error': '', 'result': 'No existe el usuario 7FULL', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:00:47.167732
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "7FULL",
+    "email": false,
+    "result": null
+}
+Response:
+{'error': '', 'result': 'No existe el usuario 7FULL', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:22:09.370546
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "7FULL",
+    "email": false,
+    "result": null
+}
+Response:
+{'error': '', 'result': 'No existe el usuario 7FULL', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:22:19.677119
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "7FULL",
+    "email": false,
+    "result": null
+}
+Response:
+{'error': '', 'result': 'No existe el usuario 7FULL', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:22:55.423896
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "7FULL",
+    "email": false,
+    "result": null
+}
+Response:
+{'error': '', 'result': 'No existe el usuario 7FULL', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:23:35.486622
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "7FULL",
+    "email": false,
+    "result": null
+}
+Response:
+{'error': '', 'result': 'No existe el usuario 7FULL', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:23:54.173961
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "7FULL",
+    "email": false,
+    "result": null
+}
+Response:
+{'error': '', 'result': 'No existe el usuario 7FULL', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:32:13.647345
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "7FULL",
+    "email": false,
+    "result": null
+}
+Response:
+{'error': '', 'result': 'No existe el usuario 7FULL', 'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:42:38.390039
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phgfull@gmail.com",
+    "email": "phgfull@gmail.com",
+    "result": {
+        "_id": "64a1560c45e45e31becaad7c",
+        "username": "pi",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phgfull@gmail.com",
+        "phone": "678041577",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "logo (1).png",
+        "description": "adadad",
+        "token": "",
+        "streamKey": "admin"
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64a1560c45e45e31becaad7c',
+                  'description': 'adadad',
+                  'email': 'phgfull@gmail.com',
+                  'emailVerified': True,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '678041577',
+                  'profile': 'logo (1).png',
+                  'status': 0,
+                  'streamKey': 'admin',
+                  'token': '',
+                  'username': 'pi'},
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:42:38.392631
+Called: register
+Args:
+{
+    "username": "7FULL",
+    "password": "baabbb93c698f23888c3396faba9f0bf1329af0447b2246a2afb1a1368792369",
+    "email": "phgfull@gmail.com",
+    "phone": "000000000",
+    "token": "b5EnMc22",
+    "caracteres": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+}
+Response:
+{'error': '', 'result': 'Ya existe el usuario 7FULL', 'status': 409}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:43:10.415039
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "phermidagomez@gmail.com",
+    "email": "phermidagomez@gmail.com",
+    "result": null
+}
+Response:
+{   'error': '',
+    'result': 'No existe el usuario phermidagomez@gmail.com',
+    'status': 404}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:43:10.719919
+Called: register
+Args:
+{
+    "username": "Pablo Hermida",
+    "password": "e0e517c01217428d4b9279c78d0916a7b740bad14817e38ca803701d137b6511",
+    "email": "phermidagomez@gmail.com",
+    "phone": "000000000",
+    "token": "KGF9TH3l",
+    "user": {
+        "username": "Pablo Hermida",
+        "password": "e0e517c01217428d4b9279c78d0916a7b740bad14817e38ca803701d137b6511",
+        "email": "phermidagomez@gmail.com",
+        "phone": "000000000",
+        "status": 0,
+        "emailVerified": false,
+        "profile": "",
+        "description": "",
+        "token": ""
+    },
+    "caracteres": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+}
+Response:
+{   'error': '',
+    'result': 'Usuario Pablo Hermida registrado correctamente',
+    'status': 200}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-08-01 17:43:10.817871
+Called: getUserByNameOrEmail
+Args:
+{
+    "username": "Pablo Hermida",
+    "email": false,
+    "result": {
+        "_id": "64c9280e5d727d66f83f315c",
+        "username": "Pablo Hermida",
+        "password": "SSSSSHHHH SECRET",
+        "email": "phermidagomez@gmail.com",
+        "phone": "000000000",
+        "status": 0,
+        "emailVerified": false,
+        "profile": "",
+        "description": "",
+        "token": "",
+        "streamkey": "KGF9TH3l"
+    }
+}
+Response:
+{   'error': '',
+    'result': {   '_id': '64c9280e5d727d66f83f315c',
+                  'description': '',
+                  'email': 'phermidagomez@gmail.com',
+                  'emailVerified': False,
+                  'password': 'SSSSSHHHH SECRET',
+                  'phone': '000000000',
+                  'profile': '',
+                  'status': 0,
+                  'streamkey': 'KGF9TH3l',
+                  'token': '',
+                  'username': 'Pablo Hermida'},
+    'status': 200}
+
+
+<------------------------------------------------------->

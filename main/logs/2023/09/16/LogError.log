@@ -1,0 +1,65 @@
+
+
+Date: 2023-09-16 13:35:16.605209
+Called: registerToken
+Args:
+{
+    "username": "Pablo adadad",
+    "token_lenght": 16,
+    "token": "TXtb252WkZNhULvm",
+    "result": null,
+    "e": "'NoneType' object is not subscriptable"
+}
+Response:
+{   'error': "'NoneType' object is not subscriptable",
+    'result': 'Error al actualizar la descripción del usuario Pablo adadad',
+    'status': 500}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-09-16 13:44:15.160330
+Called: login
+Args:
+{
+    "username": "adada",
+    "password": "1c255a3d204ff790e9f6942893d30b2344bf0e424e0a4aff26acdf77e57fe4d1",
+    "token": "03AFcWeA42qsESLmdnnbV6N_q91JSYHQ7gGhNx7PQQl3pw8445dh_FUFRViPYlFFm0UHPZjTHcKMD1RVfBg1heCiGcmlYh0n0d0gEUK2VdwklYMDaU_hduwC4746QlhFtvJAvZIhLRkhe9hd4bDM1uGuvgIuiV7VnInnPGuuuw53bTgfxO6ONruHuKW5DAFEI5mRUDWWgu-3nd2q2QgdNUOT_enfMUU2koXvFNLmAUdZpnPQAp0CKm7efob5NcAMLWNEJOqIWKNr1MYabEB9u1qVUhveCO8rEDUXMjk5m1EgBKrNhOrjmDzw9VHw08rVMAeDiZiwSwqAhZ9zs8BbglAbFqtm_TpphsxefMbxK2MubZ_kihvHS1zGrpAJ8r7zDrz78Vu7pg3QdnHyPoaPNQHHo0NmqHKul1-DZ4m5ftEnJUynvUnzLCA8jZOZYdO5UpuR1jiCRvupB5ksvy6oC2bZSmFeVvYlTZ07Y3fb281eqXbk4JO87CtJy4MyhhVO_4Q12pFEgKISrgPphnNcbRy5XJpjFAiZJrtfSmftOXGebM6Q6GtY-yuTjdrGEq3FLh0lAFg-EkaDZnINgVp4uZTaGXhmFNxCQeuWefDNEzFfxxFCI_KPcsNsORzxgt6I_zg8FNSOFNfC-RR6N8d3O8WlPgZvZ_7Udck8W596ZO7guO53zAkSFGhpjoisqRxiYVDjfAi1QksTKTubmpJos1uXa--gb7JdYEP3Vz6mnd4tTpuvuuuKno30VwM9yPonOggdKZQi_Rl_OxfRcmIcW2N1zcGZwxVHnB7UilzPWN71b9ElgpPUP-1alqGhAeX2cmUYHfTQ4dc7mTP7Ai7S_ifodPdGL6PWtbSld5a90DX-_UAI06LuPQ-YkUBOWI977V9QxckCtC9tK_sZtVfIP_Z6QeshXP8uwEttjpR45_NEsVpwh2JmIVVHFCALugWofXrVYRPLhqLDrRJ_5D5oR7sMnwViGtwa-MK5tPh4A5smG4d5zVWnCr3RQgI9QEZJIj9j2GbdWZG_tbrv7ORSZJ-0O4jrcOIsAMN_ekmxVouvZtrl71tolB8pDDN4j-78PLZtd0ftiV-qayqNlUD0a_uNPhWhfmTuNkmlq37gGpU_AqO8Pfmxe3-CIIadti61zs8z81o26KxQYTYtzmllzDjF-YzyTpykO4uz01es6bNSP0Orn1Cs_hsXBlp7j3kp1lK7lvzoNmTJ_JRYmP_M8L4triLjUY9wMCtnfF6qMamm2Hm7UFo_1mQ1RpzzJ8IAQCXB0ynPAi1DpTLk8TXAT5Hk5cEO3mnS-EC23Z7_6royDl8v9ELOlNApZKH4r17GdzYD3ui5B6yHMn5b-RWtt5FcH268nQh30EKnbFJgrbfzKygtL3RgdJkGRTeNZeecZzenCPgN5xn_BAB_wMl_e1TMhAp-hNuUHpD7iB3e58bfk4LS-Dds7KftXsSftY9J206uzOk0WWenesMFBgLnJXRXgmmX17MiCz2Wqk8K0Yr2ePbICGb6H4gbJeCrafUXqclsbZLXiPLJN1",
+    "response": "<Response [200]>",
+    "result": null
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
+
+
+Date: 2023-09-16 17:00:49.437191
+Called: login
+Args:
+{
+    "username": "phermidagomez@gmail.com",
+    "password": "65f2b43a5aba29aade6cbd0d138265c7436dd5f3ca5efec2268a78534fa4dc17",
+    "token": "03AFcWeA5U4_5tDkK8XxTjiFA-6BVYIiZfZZgpZEcGnmR8mHzGtk5ew8GR67KoshXTWD6R4CRZ8n-cPPhqnuuF0LuRCgtmoBgUeWCynBOpdmaVKjNEGoJjtlKxYAmKuyYxVHJtODX_8qgMCf_4yyptt_uqu8_IuXWwM7ioKg4dYhbo42ecNZeigJI_gr_HtFpPdcfxF6_4eHEdYXtKYiQKfxBRYMXlhw1WKXZVTQ4lIroMLQcoCcw1k2lfwfR1OyN0woF16MAs1Lkzws7q53gR2WzzOFKHReQgdpoqfiHJNJh8c339YOiQ6hjTTyGUoffQB-CKmTCEWOiIYWjcPyI2af883VuJojJNXbJYVhaBBHaliPkFh28f3ck36-pFJ5UGd_8i97n6fubfaYTaO9FYk12EffK5WHzBNYP7c9doJ9pb53orUwwut2gp3cmQbNFi4xb1clzzwoJCR0VTYVQ64UN5qybJjMzDa16DdRuOLvYlYdgzV4SR0grfZIHwn6wBJo6izv6oY46rPFD_SJ-2SJwrwR3IX7uJhgwOmaOBlEwrLM-h16RrIIR5trwCDdwtzL5cPavy1TK_jmYv6GqKSnWGTp-Fmo6SBlM6RdQaabi2UxnCP-drdlGOLl80D4ql0SBqJpUTkvZP9MoacrVYR0ZvEWHi0lruCMTnnWR2BEkYJ7NsKtF6b-w3Nu0cIe8uGDGXPdr4_r4VW4LF1KihSHSS4za06ZvQ5dzrroistFi3PiFg0gBym94cTW4ZCBLP5d6Yig7vY-mVaAQfBM17jw54FFo-37SZrSPfta4pJv0YbXzRizeWJudXbrErT8suHg0akJVyhYjFvO8YfeN1Ne6GbfRq0c3jAOnGda9piNzRn992lNuRDt8xYHef7JiA2cETJhA7_5aYXrz9obXKOXEjqCXQsMduxXqO0v7WNI5lJ8M-GDR8lpODzq8dvGyT6oihydi_d4QhrAhQMeETJthX0sMTvnB_zx9gdGaDu2iTlQU-wJcoafUpDAPgbtlHAsI9ouGiOmFMr89XYMmGXtLIhuzsDvTFt4op67gHU9R_nd4G65L2WajVFdNBPc2sAa_tUbfvWRlP3UJGAOfJMFvAh9S81FC2N9ugj3gyGbchDUzMK1dqM8S1CEVZ9Q67Oz8AYiThTSJPwWQooX9IkFDx1vuLfpCu6ki5dIZvmxjGqJs74MZrRvM0jVeZKc7I3otX3vArGolpo3hR5GhKzb0jnbQtJgoKqzdxD2F90fTpv3TwKkjuLpj6Afx1roWvynLMLTAj16iqJUNEgznKvkYY7F6cmA4JT6jumhuG2TD4Yw4S3m3NTkuDlKFrf418VmB5H7t3OB3oyHOsJIZYSN27M03-6InOTUVZDlhEkiRSOoKiYJgI8g42IzkRuDA-vU9Wr_1iKz1u84oCXissEIXtUK9Y2s6EWX1SsqFDfE4G2ppkFthtf7t5zK8x5JofiztXgax4nyqSBvzBhmvTEa-bsodeeypDHaVPT2vqRiXybmxOYdTWcMpwqOkm12VCR0lz1RtVYFlk",
+    "response": "<Response [200]>",
+    "result": {
+        "_id": "64c9280e5d727d66f83f315c",
+        "username": "Pablo Hermida",
+        "password": "e0e517c01217428d4b9279c78d0916a7b740bad14817e38ca803701d137b6511",
+        "email": "phermidagomez@gmail.com",
+        "phone": "000000000",
+        "status": 0,
+        "emailVerified": true,
+        "profile": "",
+        "description": "",
+        "token": "lRG9LIMu3QlWjNer",
+        "streamkey": "KGF9TH3l"
+    }
+}
+Response:
+{'error': 'Usuario o contraseña incorrectos', 'result': False, 'status': 401}
+
+
+<------------------------------------------------------->
